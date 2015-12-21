@@ -1,0 +1,16 @@
+{
+  "name": "hp",
+  "moduleType": [
+    "globals"
+  ],
+  "dependencies": {
+    "material-design-lite": "1.0.x",
+    "jquery": "2.x",
+    "jquery-pjax": "1.x"
+  },
+  "overrides": {
+    "jquery": {
+      "main": "dist/jquery.min.js"
+    }
+  }
+}
