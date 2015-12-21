@@ -48,6 +48,14 @@
       -# Content
       %main.mdl-layout__content
         #content
+          #top-page-container
+            .space{style: "min-height: 30px; height: 30%"}
+            #desc.text-center
+              %h1.white S--Minecraft.github.io
+              %p.white Welcome to S--Minecraft.github.io
+          -# pjaxで書き換えるためここに置く
+          %script{type: "text/javascript", src: "js/top.js"}
+
       -# Footer
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
