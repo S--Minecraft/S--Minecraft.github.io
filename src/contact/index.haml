@@ -1,0 +1,45 @@
+!!!5
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+    %meta{http-equiv: "X-UA-Compatible", content: "IE=edge"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
+
+    %title S--Minecraft
+    %meta{name: "description", content: "S__Minecraftのポートフォリオです"}
+
+    %link{rel: "stylesheet", href: "../lib/material.min.css"}
+    %link{rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons"}
+
+    %link{rel: "icon", sizes="16x16 32x32 48x48 128x128 256x256", href="/img/favicon.ico"}
+    %link{rel: "stylesheet", href: "../css/core.css"}
+  %body
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+      -# Header
+      %header.mdl-layout__header
+        .mdl-layout__header-row
+          %span.mdl-layout-title S--Minecraft
+          .mdl-layout-spacer
+          %nav.mdl-navigation.mdl-layout--large-screen-only
+            %a.mdl-navigation__link{href: "../profile"} Profile
+            %a.mdl-navigation__link{href: "../works"} Works
+            %a.mdl-navigation__link{href: "../blog"} Blog
+            %a.mdl-navigation__link{href: ""} Contact
+      -# Menu
+      .mdl-layout__drawer
+        %span.mdl-layout-title S--Minecraft
+        %nav.mdl-navigation
+          %a.mdl-navigation__link{href: "../"} Top
+          %a.mdl-navigation__link{href: "../profile"} Profile
+          %a.mdl-navigation__link{href: "../works"} Works
+          %a.mdl-navigation__link{href: "../blog"} Blog
+          %a.mdl-navigation__link{href: ""} Contact
+      -# Content
+      %main.mdl-layout__content
+        .page-content
+
+    %script{type: "text/javascript", src="../lib/jquery.min.js"}
+    %script{type: "text/javascript", src="../lib/jquery.pjax.js"}
+    %script{type: "text/javascript", src: "../lib/material.min.js"}
+
+    %script{type: "text/javascript", src: "../js/core.js"}
