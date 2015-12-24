@@ -11,6 +11,7 @@
     %link{rel: "stylesheet", href: "../lib/material.min.css"}
     %link{rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons"}
     %script{type: "text/javascript", src: "../lib/jquery.min.js"}
+    %script{type: "text/javascript", src: "../lib/material.min.js"}
 
     %link{rel: "icon", sizes: "16x16 32x32 48x48 128x128 256x256", href: "../img/favicon.ico"}
     %link{rel: "stylesheet", href: "../css/core.css"}
@@ -48,12 +49,94 @@
       -# Content
       %main.mdl-layout__content
         #content
+          #profile-page-container.mdl-grid
+            #profile-card.mdl-cell.mdl-cell--12-col.mdl-card.mdl-shadow--3dp.center
+              %img.mdl-shadow--3dp.center{src: "../img/favicon.png", height: "256px", width: "256px"}
+              %h1.h3.text-center S__Minecraft
+            #programming.mdl-cell.mdl-cell--4-col.md-card.mdl-shadow--3dp
+              %h2.h4 Programming Languages
+              %dl
+                %dt Coffeescript
+                %dd
+                  #Coffee.mdl-progress.mdl-js-progress
+                %dt Javascript
+                %dd
+                  #Javascript.mdl-progress.mdl-js-progress
+                %dt Go
+                %dd
+                  #Go.mdl-progress.mdl-js-progress
+                %dt Java
+                %dd
+                  #Java.mdl-progress.mdl-js-progress
+                %dt Swift
+                %dd
+                  #Swift.mdl-progress.mdl-js-progress
+                %dt Typescript
+                %dd
+                  #Typescript.mdl-progress.mdl-js-progress
+                %dt C#
+                %dd
+                  #CS.mdl-progress.mdl-js-progress
+                %dt C/C++
+                %dd
+                  #C.mdl-progress.mdl-js-progress
+                %dt Haskell
+                %dd
+                  #Haskell.mdl-progress.mdl-js-progress.mdl-progress__indeterminate
+            #markup.mdl-cell.mdl-cell--4-col.md-card.mdl-shadow--3dp
+              %h2.h4 Markup Languages
+              %dl
+                %dt HTML/CSS
+                %dd
+                  #HTML.mdl-progress.mdl-js-progress
+                %dt Haml
+                %dd
+                  #Haml.mdl-progress.mdl-js-progress
+                %dt SCSS
+                %dd
+                  #SCSS.mdl-progress.mdl-js-progress
+            #enviroment.mdl-cell.mdl-cell--4-col.mdl-cell--8-col-tablet.md-card.mdl-shadow--3dp
+              %h2.h4 Enviroment
+              %p Only major ones I use.
+              .mdl-grid
+                .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet
+                  %dl
+                    %dt OS
+                    %dd Windows 8.1
+                    %dt Video Editing
+                    %dd AviUtl
+                    %dt Image Editing
+                    %dd krita
+                    %dd JTrim
+                    %dd pixia
+                    %dd paint
+                .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet
+                  %dl
+                    %dt Text Editing
+                    %dd Mery
+                    %dt IDE
+                    %dd Eclipse
+                    %dd Visual Studio
+            #twitter.mdl-cell.mdl-cell--6-col.md-card.mdl-shadow--3dp
+              %h2.h4 Twitter
+              -# #twitter-timeline
+              %a.twitter-timeline{href: "https://twitter.com/S__Minecraft", "data-widget-id": "679237762432675841"} @S__Minecraftさんのツイート
+              :javascript
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+            #github.mdl-cell.mdl-cell--6-col.md-card.mdl-shadow--3dp
+              %h2.h4 GitHub
+              .github-card{"data-user": "S--Minecraft"}
+              %script{src: "//cdn.jsdelivr.net/github-cards/latest/widget.js"}
+              #github-widget{"data-user": "S--Minecraft", "data-display": "pop_repos,contribution"}
+              %script{src: "//gh-widget.oyanglul.us/index.js"}
+
+          -# pjaxで書き換えるためここに置く
+          %script{type: "text/javascript", src: "../js/profile.js"}
       -# Footer
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
           %p (C) 2015 S__Minecraft
 
     %script{type: "text/javascript", src: "../lib/jquery.pjax.js"}
-    %script{type: "text/javascript", src: "../lib/material.min.js"}
 
     %script{type: "text/javascript", src: "../js/core.js"}
