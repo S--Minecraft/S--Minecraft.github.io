@@ -33,7 +33,7 @@ gulp.task "haml", ->
   return gulp.src "./src/**/*.haml"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin"))
-    .pipe(haml())
+    .pipe(haml({ compiler: "visionmedia" }))
     .pipe(gulp.dest("./bin"))
 
 gulp.task "scss", ->
