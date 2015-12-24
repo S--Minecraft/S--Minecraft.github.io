@@ -49,6 +49,12 @@
       -# Content
       %main.mdl-layout__content
         #content
+          #works-page-container
+            #works-tab.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
+              #works-tab-bar.mdl-tabs__tab-bar
+              #works-panels.mdl-grid
+          -# pjaxで書き換えるためここに置く
+          %script{type: "text/javascript", src: "../js/works.js"}
       -# Footer
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
