@@ -8,7 +8,7 @@ sass = require "gulp-sass"
 haml = require "gulp-haml"
 bower = require "main-bower-files"
 
-tasks = ["coffee", "haml", "scss", "img", "lib"]
+tasks = ["coffee", "haml", "scss", "icons", "img", "lib"]
 gulp.task "default", tasks
 
 gulp.task "clean", (cb) ->
@@ -18,6 +18,7 @@ gulp.task "watch", ["default"], ->
   gulp.watch "./src/**/*.coffee", ["coffee"]
   gulp.watch "./src/**/*.haml", ["haml"]
   gulp.watch "./src/**/*.scss", ["scss"]
+  gulp.watch "./src/css/icons/*.svg", ["icons"]
   gulp.watch "./src/img/**", ["img"]
   return
 
@@ -37,20 +38,34 @@ gulp.task "haml", ->
     .pipe(gulp.dest("./bin"))
 
 gulp.task "scss", ->
-  return gulp.src "./src/**/*.scss"
+  return gulp.src ["./src/**/*.scss"]
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin"))
     .pipe(sass())
     .pipe(gulp.dest("./bin"))
 
+gulp.task "icons", ->
+  return gulp.src ["./src/css/icons/**/*.svg"]
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(changed("./bin/css/icons"))
+    .pipe(gulp.dest("./bin/css/icons"))
+
 gulp.task "img", ->
-  return gulp.src "./src/img/**"
+  return gulp.src ["./src/img/**"]
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin/img"))
     .pipe(gulp.dest("./bin/img"))
 
-gulp.task "lib", ->
+gulp.task "lib-bower", ->
   return gulp.src(bower())
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin/lib"))
     .pipe(gulp.dest("./bin/lib"))
+
+gulp.task "lib-copy", ->
+  return gulp.src "./src/lib/**"
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(changed("./bin/lib"))
+    .pipe(gulp.dest("./bin/lib"))
+
+gulp.task "lib", ["lib-bower", "lib-copy"]
