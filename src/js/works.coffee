@@ -137,15 +137,11 @@ setupTab = ->
   $$.I("works-panels").innerHTML = tabHtml
   return
 
-load = ->
+document.on("DOMContentLoaded", ->
   allTag = makeAllTag()
   setupTabBar(allTag)
   setupTab()
   setupTabBarEvent(allTag)
   componentHandler.upgradeDom()
   return
-s.load = load
-
-document.on("DOMContentLoaded", load, false)
-
-console.log "works load"
+, false)
