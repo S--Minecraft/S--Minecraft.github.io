@@ -17,6 +17,7 @@
     padding-bottom: 5px;
     padding-left: 5px;
     padding-right: 5px;
+
     .mdl-progress {
       width: 90%;
     }
@@ -54,6 +55,38 @@
       border-style: none;
       border-color: #666666;
       border-radius: 5px;
+    }
+  }
+}
+
+#contact-page-container {
+  #form, #details {
+    >.mdl-card {
+      width: 100%;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 5px;
+
+      form > * {
+        width: 100%;
+      }
+      #status {
+        font-size: 18px;
+        margin-top: 10px;
+        font-weight: 800;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 3px;
+        color: #FFFFFF;
+        &.success {
+          border-color: #333399;
+          background: #6666CC;
+        }
+        &.error {
+          border-color: #993333;
+          background: #CC6666;
+        }
+      }
     }
   }
 }
