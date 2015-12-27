@@ -5,8 +5,7 @@
   ],
   "dependencies": {
     "material-design-lite": "1.0.x",
-    "ShortQuery.js": "S--Minecraft/ShortQuery.js",
-    "pjax": "js-playground/pjax#~2.1.1",
+    "pjax": "MoOx/pjax#0.1.4",
     "shortquery": "S--Minecraft/ShortQuery.js#~0.0.2"
   },
   "overrides": {

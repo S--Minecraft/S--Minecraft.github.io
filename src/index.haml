@@ -22,7 +22,7 @@
         .mdl-layout__header-row
           %span.mdl-layout-title S--Minecraft
           .mdl-layout-spacer
-          %nav.mdl-navigation.mdl-layout--large-screen-only
+          %nav#menu.mdl-navigation.mdl-layout--large-screen-only
             %a.mdl-navigation__link{href: "profile"} Profile
             %a.mdl-navigation__link{href: "works"} Works
             %a.mdl-navigation__link{href: "blog"} Blog
@@ -30,7 +30,7 @@
       -# Menu
       .mdl-layout__drawer
         %span.mdl-layout-title S--Minecraft
-        %nav.mdl-navigation
+        %nav#nav.mdl-navigation
           %a.mdl-navigation__link{href: ""}
             %i.material-icons.md-18 home
             Top
@@ -54,8 +54,6 @@
             #desc.text-center
               %h1.white S--Minecraft.github.io
               %p.white Welcome to S--Minecraft.github.io
-          -# pjaxで書き換えるためここに置く
-          %script{type: "text/javascript", src: "js/top.js"}
       -# Footer
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
@@ -63,3 +61,4 @@
     
     %script{type: "text/javascript", src: "lib/pjax.js"}
     %script{type: "text/javascript", src: "js/core.js"}
+    %script{type: "text/javascript", src: "js/top.js"}

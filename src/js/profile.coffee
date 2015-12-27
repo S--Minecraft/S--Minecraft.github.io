@@ -12,7 +12,7 @@ pLang = {
   SCSS: { v: 40 }
 }
 
-window.on("load", ->
+load = ->
   # Progress Bars
   for key of pLang
     progress = $$.I(key).MaterialProgress
@@ -20,4 +20,9 @@ window.on("load", ->
     progress.setProgress(setting.v)
     if pLang[key].buffer? then progress.setBuffer(setting.buffer)
   return
-, false)
+s.load = load
+
+window.on("load", load, false)
+
+console.log "profile load"
+

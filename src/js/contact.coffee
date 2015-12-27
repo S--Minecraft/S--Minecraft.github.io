@@ -60,8 +60,12 @@ form = ->
   , false)
   return
 
-document.on("DOMContentLoaded", ->
+load = ->
   # フォーム
   form()
   return
-, false)
+s.load = load
+
+document.on("DOMContentLoaded", load, false)
+
+console.log "contact load"

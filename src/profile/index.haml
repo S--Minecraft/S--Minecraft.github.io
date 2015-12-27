@@ -22,7 +22,7 @@
         .mdl-layout__header-row
           %span.mdl-layout-title S--Minecraft
           .mdl-layout-spacer
-          %nav.mdl-navigation.mdl-layout--large-screen-only
+          %nav#menu.mdl-navigation.mdl-layout--large-screen-only
             %a.mdl-navigation__link{href: ""} Profile
             %a.mdl-navigation__link{href: "../works"} Works
             %a.mdl-navigation__link{href: "../blog"} Blog
@@ -30,7 +30,7 @@
       -# Menu
       .mdl-layout__drawer
         %span.mdl-layout-title S--Minecraft
-        %nav.mdl-navigation
+        %nav#nav.mdl-navigation
           %a.mdl-navigation__link{href: "../"}
             %i.material-icons.md-18 home
             Top
@@ -147,11 +147,10 @@
             #github.mdl-cell.mdl-cell--6-col.md-card.mdl-shadow--3dp
               %h2.h4 GitHub
               .github-card{"data-user": "S--Minecraft", "data-theme": "medium"}
-              %script{src: "//cdn.jsdelivr.net/github-cards/latest/widget.js", async: true}
+              %script.load{src: "//cdn.jsdelivr.net/github-cards/latest/widget.js", async: true}
           -# pjaxで書き換えるためここに置く
           %link{rel: "stylesheet", href: "../css/icons.css"}
           %link{rel: "stylesheet", href: "../lib/dark.css"}
-          %script{type: "text/javascript", src: "../js/profile.js"}
       -# Footer
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
@@ -159,3 +158,4 @@
     
     %script{type: "text/javascript", src: "../lib/pjax.js"}
     %script{type: "text/javascript", src: "../js/core.js"}
+    %script{type: "text/javascript", src: "../js/profile.js"}

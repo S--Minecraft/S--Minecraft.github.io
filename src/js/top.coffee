@@ -4,10 +4,8 @@ fixContainer = ->
   $$.I("top-page-container").style.height = ((windowHeight-topbottomHeight) + "px")
   return
 
-window.on("load", ->
-  fixContainer()
-  return
-, false)
+document.on("DOMContentLoaded", fixContainer, false)
+s.load = fixContainer
 
 timer = false
 window.on("resize", ->
@@ -19,3 +17,5 @@ window.on("resize", ->
   , 200)
   return
 , false)
+
+console.log "top load"
