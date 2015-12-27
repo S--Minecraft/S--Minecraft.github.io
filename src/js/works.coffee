@@ -89,23 +89,31 @@ setupTabBar = (allTag) ->
       barHtml += "<a href=\"##{tag}\" id=\"#{tag}\" class=\"mdl-tabs__tab is-active\">#{tag}</a>"
     else
       barHtml += "<a href=\"##{tag}\" id=\"#{tag}\" class=\"mdl-tabs__tab\">#{tag}</a>"
-  $("#works-tab-bar").html(barHtml)
+  $$.I("works-tab-bar").innerHTML = barHtml
   return
 
 setupTabBarEvent = (allTag) ->
-  bar = $("#works-tab-bar")
   for tag in allTag
     if tag isnt "All"
-      bar.find("##{tag}").on("click", ->
-        panels = $("#works-panels")
-        panels.children().addClass("hidden")
-        panels.find(".#{@.id}").removeClass("hidden")
+      $$.I(tag).addEventListener("click", ->
+        panels = $$.I("works-panels")
+        $$.each(panels.children, (child) ->
+          child.addClass("hidden")
+          return
+        )
+        $$.each(panels.C(@id), (dom) ->
+          dom.removeClass("hidden")
+          return
+        )
         return
-      )
-  bar.find("#All").on("click", ->
-    $("#works-panels").children().removeClass("hidden")
+      , false)
+  $$.I("All").addEventListener("click", ->
+    $$.each($$.I("works-panels").children, (child) ->
+      child.removeClass("hidden")
+      return
+    )
     return
-  )
+  , false)
   return
 
 setupTab = ->
@@ -126,15 +134,14 @@ setupTab = ->
         tabHtml += "<li class=\"mdl-shadow--2dp\">#{t}</li>"
       tabHtml += "</ul>"
     tabHtml += "</div>"
-  tabs = $("#works-panels")
-  tabs.html(tabHtml)
+  $$.I("works-panels").innerHTML = tabHtml
   return
 
-$ ->
+document.on("DOMContentLoaded", ->
   allTag = makeAllTag()
   setupTabBar(allTag)
   setupTab()
   setupTabBarEvent(allTag)
-  componentHandler.upgradeElement(document.getElementById("works-tab-bar"))
-  componentHandler.upgradeElement(document.getElementById("works-tab"))
+  componentHandler.upgradeDom()
   return
+, false)

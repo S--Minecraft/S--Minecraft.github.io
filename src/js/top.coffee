@@ -1,14 +1,16 @@
 fixContainer = ->
-  container = $("#top-page-container")
-  container.height($(window).height()-$("header").outerHeight()-$("footer").outerHeight())
+  windowHeight = window.innerHeight
+  topbottomHeight = $$.T("header")[0].offsetHeight + $$.T("footer")[0].offsetHeight
+  $$.I("top-page-container").style.height = ((windowHeight-topbottomHeight) + "px")
   return
 
-$ ->
+window.on("load", ->
   fixContainer()
   return
+, false)
 
 timer = false
-$(window).resize(->
+window.on("resize", ->
   if timer
     clearTimeout(timer)
   timer = setTimeout(->
@@ -16,4 +18,4 @@ $(window).resize(->
     return
   , 200)
   return
-)
+, false)
