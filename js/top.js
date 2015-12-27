@@ -1,0 +1,1 @@
+(function(){var t,e;t=function(){var t;t=$("#top-page-container"),t.height($(window).height()-$("header").outerHeight()-$("footer").outerHeight())},$(function(){t()}),e=!1,$(window).resize(function(){e&&clearTimeout(e),e=setTimeout(function(){t()},200)})}).call(this);
