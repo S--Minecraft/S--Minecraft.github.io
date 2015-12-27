@@ -76,35 +76,35 @@ gulp.task "lib-copy", ->
 
 gulp.task "lib", ["lib-bower", "lib-copy"]
 
-gulp.task "js-min", ->
+gulp.task "js-min", ["coffee"], ->
   return gulp.src "./bin/js/**/*.js"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(uglify())
     .pipe(gulp.dest("./release/js"))
 
-gulp.task "html-min", ->
+gulp.task "html-min", ["haml"], ->
   return gulp.src "./bin/**/*.html"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./release"))
 
-gulp.task "css-min", ->
+gulp.task "css-min", ["scss"], ->
   return gulp.src "./bin/css/**/*.css"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(cssnano())
     .pipe(gulp.dest("./release/css"))
 
-gulp.task "r-icons", ->
+gulp.task "r-icons", ["icons"], ->
   return gulp.src "./bin/css/icons/**"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(gulp.dest("./release/css/icons"))
 
-gulp.task "r-img", ->
+gulp.task "r-img", ["img"], ->
   return gulp.src "./bin/img/**"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(gulp.dest("./release/img"))
 
-gulp.task "r-lib", ->
+gulp.task "r-lib", ["lib"], ->
   return gulp.src "./bin/lib/**"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(gulp.dest("./release/lib"))
