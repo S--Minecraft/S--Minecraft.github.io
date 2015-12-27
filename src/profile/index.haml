@@ -147,9 +147,9 @@
             #github.mdl-cell.mdl-cell--6-col.md-card.mdl-shadow--3dp
               %h2.h4 GitHub
               .github-card{"data-user": "S--Minecraft"}
-              %script{src: "//cdn.jsdelivr.net/github-cards/latest/widget.js"}
+              %script{src: "//cdn.jsdelivr.net/github-cards/latest/widget.js", async: true}
               #github-widget{"data-user": "S--Minecraft", "data-display": "pop_repos,contribution"}
-              %script{src: "//gh-widget.oyanglul.us/index.js"}
+              %script{src: "//gh-widget.oyanglul.us/index.js", async: true}
               %iframe{width: "600", height:"600", src: "https://ionicabizau.github.io/github-profile-languages/api.html?S--Minecraft", frameborder: "0"}
           -# pjaxで書き換えるためここに置く
           %link{rel: "stylesheet", href: "../css/icons.css"}
