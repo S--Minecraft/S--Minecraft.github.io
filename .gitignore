@@ -3,3 +3,7 @@
 /bower_components/
 /release/
 /src/
+/package.json
+/bower.json
+/gulpfile.coffee
+/install.cmd
