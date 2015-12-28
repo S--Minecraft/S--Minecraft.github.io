@@ -10,7 +10,6 @@
     "gulp-notify": "*",
     "gulp-plumber": "*",
     "gulp-changed": "*",
-    "gulp-header": "*",
     "gulp-coffee": "*",
     "gulp-sass": "*",
     "gulp-haml": "*",

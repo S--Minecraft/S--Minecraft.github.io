@@ -3,7 +3,6 @@ del = require "del"
 notify = require "gulp-notify"
 plumber = require "gulp-plumber"
 changed = require "gulp-changed"
-header = require "gulp-header"
 coffee = require "gulp-coffee"
 sass = require "gulp-sass"
 haml = require "gulp-haml"
@@ -63,15 +62,7 @@ gulp.task "img", ->
     .pipe(changed("./bin/img"))
     .pipe(gulp.dest("./bin/img"))
 
-gulp.task "pjax", ->
-  return gulp.src "./bower_components/pjax/*.js"
-    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(changed("./bower_components/pjax/bin"))
-    .pipe(uglify())
-    .pipe(header("/*\n  js-playground/pjax\n  https://github.com/js-playground/pjax\n*/\n"))
-    .pipe(gulp.dest("./bower_components/pjax/bin"))
-
-gulp.task "lib-bower", ["pjax"], ->
+gulp.task "lib-bower", ->
   return gulp.src(bower())
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin/lib"))
