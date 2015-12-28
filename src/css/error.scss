@@ -108,6 +108,11 @@ header {
       margin: 0;
       -webkit-tap-highlight-color: rgba(255,255,255,0);
     }
+    @media (max-width: 549px) {
+      a {
+        display: none;
+      }
+    }
   }
 }
 
@@ -132,6 +137,11 @@ main {
   }
   .spacer {
     margin: 20%;
+  }
+  @media (min-width: 550px) {
+    .mini {
+      display: none;
+    }
   }
 }
 
