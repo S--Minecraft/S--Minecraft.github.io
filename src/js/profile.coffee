@@ -12,12 +12,12 @@ pLang = {
   SCSS: { v: 40 }
 }
 
-set = (obj) ->
-  return ->
-    @MaterialProgress.setProgress(obj.v)
-    if obj.buffer? then @MaterialProgress.setBuffer(obj.buffer)
-    return
-
-# Progress Bars
-for key, v of pLang
-  $$.I(key).on("mdl-componentupgraded", set(v), false)
+window.on("load", ->
+  # Progress Bars
+  for key of pLang
+    progress = $$.I(key).MaterialProgress
+    setting = pLang[key]
+    progress.setProgress(setting.v)
+    if pLang[key].buffer? then progress.setBuffer(setting.buffer)
+  return
+, false)
