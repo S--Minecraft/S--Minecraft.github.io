@@ -10,6 +10,7 @@ bower = require "main-bower-files"
 uglify = require "gulp-uglify"
 htmlmin = require "gulp-htmlmin"
 cssnano = require "gulp-cssnano"
+inlineSource = require "gulp-inline-source"
 
 tasks = ["coffee", "haml", "scss", "icons", "img", "lib"]
 gulp.task "default", tasks
@@ -82,8 +83,15 @@ gulp.task "js-min", ["coffee"], ->
     .pipe(uglify())
     .pipe(gulp.dest("./release/js"))
 
-gulp.task "html-min", ["haml"], ->
-  return gulp.src "./bin/**/*.html"
+gulp.task "html-in", ["haml"], ->
+  return gulp.src ["./bin/404.html"]
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(inlineSource())
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("./release"))
+
+gulp.task "html-min", ["html-in"], ->
+  return gulp.src ["./bin/**/*.html", "!./bin/404.html"]
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./release"))

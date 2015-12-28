@@ -17,6 +17,7 @@
     "gulp-htmlmin": "*",
     "gulp-uglify": "*",
     "gulp-cssnano": "*",
+    "gulp-inline-source": "*",
     "main-bower-files": "*"
   }
 }
