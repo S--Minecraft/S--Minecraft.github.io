@@ -64,6 +64,13 @@ footer, .mdl-mini-footer {
       border-radius: 5px;
     }
   }
+  @media (max-width: 549px) {
+    .mdl-tabs__tab-bar {
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      height: auto;
+    }
+  }
 }
 
 #contact-page-container {
