@@ -84,14 +84,14 @@ gulp.task "js-min", ["coffee"], ->
     .pipe(gulp.dest("./release/js"))
 
 gulp.task "html-in", ["haml"], ->
-  return gulp.src ["./bin/404.html"]
+  return gulp.src ["./bin/404.html", "./bin/500.html", "./bin/503.html"]
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(inlineSource())
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./release"))
 
 gulp.task "html-min", ["html-in"], ->
-  return gulp.src ["./bin/**/*.html", "!./bin/404.html"]
+  return gulp.src ["./bin/**/*.html", "!./bin/404.html", "!./bin/500.html", "!./bin/503.html"]
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./release"))
