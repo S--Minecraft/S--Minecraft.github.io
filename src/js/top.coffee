@@ -4,7 +4,7 @@ fixContainer = ->
   $$.I("top-page-container").style.height = ((windowHeight-topbottomHeight) + "px")
   return
 
-window.on("load", ->
+document.on("DOMContentLoaded", ->
   fixContainer()
   return
 , false)

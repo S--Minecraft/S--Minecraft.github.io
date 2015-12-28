@@ -86,9 +86,9 @@ setupTabBar = (allTag) ->
   barHtml = ""
   for tag, i in allTag
     if i is 0
-      barHtml += "<a href=\"##{tag}\" id=\"#{tag}\" class=\"mdl-tabs__tab is-active\">#{tag}</a>"
+      barHtml += "<a href=\"##{tag}\" id=\"#{tag}\" class=\"mdl-tabs__tab out is-active\">#{tag}</a>"
     else
-      barHtml += "<a href=\"##{tag}\" id=\"#{tag}\" class=\"mdl-tabs__tab\">#{tag}</a>"
+      barHtml += "<a href=\"##{tag}\" id=\"#{tag}\" class=\"mdl-tabs__tab out\">#{tag}</a>"
   $$.I("works-tab-bar").innerHTML = barHtml
   return
 
@@ -125,8 +125,8 @@ setupTab = ->
     tabHtml += "<h2 class=\"h4\">#{w.name}</h2>"
     tabHtml += "<p>#{w.desc}</p>"
     tabHtml += "<div id=\"buttons\">"
-    if w.dl? then tabHtml += "<a href=\"#{w.dl}\"><button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect\">Download Page</button></a>"
-    if w.github? then tabHtml += "<a href=\"#{w.github}\"><button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect\">GitHub</button></a>"
+    if w.dl? then tabHtml += "<a href=\"#{w.dl}\" class=\"out\"><button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect\">Download Page</button></a>"
+    if w.github? then tabHtml += "<a href=\"#{w.github}\" class=\"out\"><button class=\"mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect\">GitHub</button></a>"
     tabHtml += "</div>"
     if w.tags?
       tabHtml += "<ul>"

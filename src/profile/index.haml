@@ -5,7 +5,7 @@
     %meta{"http-equiv": "X-UA-Compatible", content: "IE=edge"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
     
-    %title Profile | S--Minecraft
+    %title#title Profile | S--Minecraft
     %meta{name: "description", content: "S__Minecraftのポートフォリオです"}
     
     %link{rel: "stylesheet", href: "../lib/material.min.css"}
@@ -13,7 +13,7 @@
     %script{type: "text/javascript", src: "../lib/shortQuery.min.js"}
     %script{type: "text/javascript", src: "../lib/material.min.js"}
     
-    %link{rel: "icon", sizes: "16x16 32x32 48x48 128x128 256x256", href: "../img/favicon.ico"}
+    %link#icon{rel: "icon", sizes: "16x16 32x32 48x48 128x128 256x256", href: "../img/favicon.ico"}
     %link{rel: "stylesheet", href: "../css/core.css"}
   %body
     .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
@@ -22,28 +22,28 @@
         .mdl-layout__header-row
           %span.mdl-layout-title S--Minecraft
           .mdl-layout-spacer
-          %nav.mdl-navigation.mdl-layout--large-screen-only
+          %nav#menu.mdl-navigation.mdl-layout--large-screen-only
             %a.mdl-navigation__link{href: ""} Profile
-            %a.mdl-navigation__link{href: "../works"} Works
-            %a.mdl-navigation__link{href: "../blog"} Blog
-            %a.mdl-navigation__link{href: "../contact"} Contact
+            %a.mdl-navigation__link{href: "../works/"} Works
+            %a.mdl-navigation__link{href: "../blog/"} Blog
+            %a.mdl-navigation__link{href: "../contact/"} Contact
       -# Menu
       .mdl-layout__drawer
         %span.mdl-layout-title S--Minecraft
-        %nav.mdl-navigation
+        %nav#nav.mdl-navigation
           %a.mdl-navigation__link{href: "../"}
             %i.material-icons.md-18 home
             Top
           %a.mdl-navigation__link{href: ""}
             %i.material-icons.md-18 face
             Profile
-          %a.mdl-navigation__link{href: "../works"}
+          %a.mdl-navigation__link{href: "../works/"}
             %i.material-icons.md-18 dashboard
             Works
-          %a.mdl-navigation__link{href: "../blog"}
+          %a.mdl-navigation__link{href: "../blog/"}
             %i.material-icons.md-18 subject
             Blog
-          %a.mdl-navigation__link{href: "../contact"}
+          %a.mdl-navigation__link{href: "../contact/"}
             %i.material-icons.md-18 question_answer
             Contact
       -# Content
@@ -54,25 +54,25 @@
               %img.mdl-shadow--3dp.center{src: "../img/favicon.png", height: "256px", width: "256px"}
               %h1.h3.text-center S__Minecraft
               #icons
-                %a.icon.mail{title: "My Email (Change ★ to @)", href: "mailto:S★mail.minecraft.jp.net"}
+                %a.out.icon.mail{title: "My Email (Change ★ to @)", href: "mailto:S★mail.minecraft.jp.net"}
                   %span Mail
-                %a.icon.skype{title: "My Skype", href: "Skype:live:b0b2bbb43ce50178?add"}
+                %a.out.icon.skype{title: "My Skype", href: "Skype:live:b0b2bbb43ce50178?add"}
                   %span Skype
-                %a.icon.askfm{title: "Ask me a question on Ask.fm", href: "http://ask.fm/S__Minecraft"}
+                %a.out.icon.askfm{title: "Ask me a question on Ask.fm", href: "http://ask.fm/S__Minecraft"}
                   %span Ask.fm
-                %a.icon.googleplus{title: "My Google+", href: "https://plus.google.com/114530478254597655531/posts"}
+                %a.out.icon.googleplus{title: "My Google+", href: "https://plus.google.com/114530478254597655531/posts"}
                   %span Google+
-                %a.icon.pixiv{title: "My Pixiv", href: "http://www.pixiv.net/member.php?id=12127789"}
+                %a.out.icon.pixiv{title: "My Pixiv", href: "http://www.pixiv.net/member.php?id=12127789"}
                   %span Pixiv
-                %a.icon.qiita{title: "My Qiita", href: "http://qiita.com/S__Minecraft"}
+                %a.out.icon.qiita{title: "My Qiita", href: "http://qiita.com/S__Minecraft"}
                   %span Github
-                %a.icon.github{title: "My GitHub", href: "https://github.com/S--Minecraft"}
+                %a.out.icon.github{title: "My GitHub", href: "https://github.com/S--Minecraft"}
                   %span Github
-                %a.icon.croudia{title: "Follow me on Croudia", href: "https://croudia.com/S__Minecraft"}
+                %a.out.icon.croudia{title: "Follow me on Croudia", href: "https://croudia.com/S__Minecraft"}
                   %span Croudia
-                %a.icon.appnet{title: "Follow me on App.net", href: "https://alpha.app.net/S__Minecraft"}
+                %a.out.icon.appnet{title: "Follow me on App.net", href: "https://alpha.app.net/S__Minecraft"}
                   %span App.net
-                %a.icon.twitter{title: "Follow me on twitter!", href: "https://twitter.com/S__Minecraft"}
+                %a.out.icon.twitter{title: "Follow me on twitter!", href: "https://twitter.com/S__Minecraft"}
                   %span Twitter
             #programming.mdl-cell.mdl-cell--4-col.md-card.mdl-shadow--3dp
               %h2.h4 Programming Languages
@@ -141,7 +141,7 @@
             #twitter.mdl-cell.mdl-cell--6-col.md-card.mdl-shadow--3dp
               %h2.h4 Twitter
               -# #twitter-timeline
-              %a.twitter-timeline{href: "https://twitter.com/S__Minecraft", "data-widget-id": "679237762432675841"} @S__Minecraftさんのツイート
+              %a.out.twitter-timeline{href: "https://twitter.com/S__Minecraft", "data-widget-id": "679237762432675841"} @S__Minecraftさんのツイート
               :javascript
                 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
             #github.mdl-cell.mdl-cell--6-col.md-card.mdl-shadow--3dp
@@ -157,5 +157,5 @@
         .mdl-mini-footer__left-section
           %p (C) 2015 S__Minecraft
     
-    %script{type: "text/javascript", src: "../lib/pjax.js"}
+    %script{type: "text/javascript", src: "../js/pjax.js"}
     %script{type: "text/javascript", src: "../js/core.js"}
