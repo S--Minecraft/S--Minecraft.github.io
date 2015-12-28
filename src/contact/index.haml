@@ -10,7 +10,6 @@
     
     %link{rel: "stylesheet", href: "../lib/material.min.css"}
     %link{rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons"}
-    %script{type: "text/javascript", src: "../lib/shortQuery.min.js"}
     %script{type: "text/javascript", src: "../lib/material.min.js"}
     
     %link{rel: "icon", sizes: "16x16 32x32 48x48 128x128 256x256", href: "../img/favicon.ico"}
@@ -91,12 +90,11 @@
                     Please see the
                     %a{href: "../profile"} Profile
                     \ page
-          -# pjaxで書き換えるためここに置く
-          %script{type: "text/javascript", src: "../js/contact.js"}
       -# Footer
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
           %p (C) 2015 S__Minecraft
     
-    %script{type: "text/javascript", src: "../lib/pjax.js"}
+    %script{type: "text/javascript", src: "../lib/shortQuery.min.js"}
     %script{type: "text/javascript", src: "../js/core.js"}
+    %script{type: "text/javascript", src: "../js/contact.js"}
