@@ -95,7 +95,7 @@ setupTabBar = (allTag) ->
 setupTabBarEvent = (allTag) ->
   for tag in allTag
     if tag isnt "All"
-      $$.I(tag).addEventListener("click", ->
+      $$.I(tag).on("click", ->
         panels = $$.I("works-panels")
         $$.each(panels.children, (child) ->
           child.addClass("hidden")
@@ -107,7 +107,7 @@ setupTabBarEvent = (allTag) ->
         )
         return
       , false)
-  $$.I("All").addEventListener("click", ->
+  $$.I("All").on("click", ->
     $$.each($$.I("works-panels").children, (child) ->
       child.removeClass("hidden")
       return
