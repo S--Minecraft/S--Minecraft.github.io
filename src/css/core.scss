@@ -105,6 +105,20 @@ footer, .mdl-mini-footer {
   }
 }
 
+#blog-page-container {
+  padding: 5px;
+  .mdl-card {
+    padding: 5px;
+  }
+  .time {
+    text-align: right;
+  }
+}
+
+#blog-singlepage-container {
+  padding: 5px;
+}
+
 /*
   Util
 */

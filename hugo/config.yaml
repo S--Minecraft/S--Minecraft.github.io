@@ -1,9 +1,7 @@
 baseurl: "http://s--minecraft.github.io/blog/"
 title: "S--Minecraft.github.io"
-permalinks:
-  blog: /:year/:month/:filename/
 languageCode: "jp"
 MetaDataFormat: "yaml"
-
-Indexes:
+taxonomies:
   tag: "tags"
+  category: "categories"
