@@ -13,7 +13,6 @@
     "gulp-coffee": "*",
     "gulp-sass": "*",
     "gulp-haml": "*",
-    "gulp-exec": "*",
     "gulp-htmlmin": "*",
     "gulp-uglify": "*",
     "gulp-cssnano": "*",
