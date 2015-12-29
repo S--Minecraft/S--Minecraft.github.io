@@ -12,6 +12,7 @@ uglify = require "gulp-uglify"
 htmlmin = require "gulp-htmlmin"
 cssnano = require "gulp-cssnano"
 inlineSource = require "gulp-inline-source"
+replace = require "gulp-replace"
 
 tasks = ["coffee", "haml", "scss", "icons", "img", "lib"]
 gulp.task "default", tasks
@@ -81,9 +82,13 @@ gulp.task "lib-copy", ->
 gulp.task "hugo-set", ["haml"], ->
   return gulp.src "./bin/blog/**"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(replace("|~~", "{{"))
+    .pipe(replace("~~|", "}}"))
+    .pipe(replace("~~", '"'))
+    .pipe(changed("./hugo/layouts"))
     .pipe(gulp.dest("./hugo/layouts"))
 
-gulp.task "hugo-run", (cb) ->
+gulp.task "hugo-run", ["hugo-set"], (cb) ->
   exec("cd hugo&&hugo", (err, stdout, stderr) ->
     console.log stdout
     console.log stderr
