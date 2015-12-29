@@ -5,6 +5,6 @@
   ],
   "dependencies": {
     "material-design-lite": "1.0.x",
-    "shortquery": "S--Minecraft/ShortQuery.js#~0.1.0"
+    "shortquery": "S--Minecraft/ShortQuery.js"
   }
 }
