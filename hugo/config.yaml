@@ -1,7 +1,10 @@
 baseurl: "http://s--minecraft.github.io/blog/"
 title: "S--Minecraft.github.io"
 languageCode: "jp"
+copyright: "(C) 2015 S__Minecraft"
 MetaDataFormat: "yaml"
 taxonomies:
   tag: "tags"
   category: "categories"
+author:
+  name: "S__Minecraft"

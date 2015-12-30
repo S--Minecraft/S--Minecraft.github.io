@@ -5,7 +5,7 @@
     %meta{"http-equiv": "X-UA-Compatible", content: "IE=edge"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
     
-    %title List of |~~ .Title ~~| - Blog | S--Minecraft
+    %title Section: |~~ .Title ~~| - Blog | S--Minecraft
     %meta{name: "description", content: "S__Minecraftのポートフォリオです"}
     
     %link{rel: "stylesheet", href: "../../lib/material.min.css"}
@@ -14,6 +14,13 @@
     
     %link{rel: "icon", sizes: "16x16 32x32 48x48 128x128 256x256", href: "../../img/favicon.ico"}
     %link{rel: "stylesheet", href: "../../css/core.css"}
+    
+    %link{rel: "stylesheet", href: "../../lib/dark.css"}
+    
+    |~~ if .RSSlink ~~|
+    %link{href: "|~~ .RSSlink ~~|", rel: "alternate", type: "application/rss+xml", title: "S--Minecraft.github.io"}
+    %link{href: "|~~ .RSSlink ~~|", rel: "feed", type: "application/rss+xml", title: "S--Minecraft.github.io"}
+    |~~ end ~~|
   %body
     .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
       -# Header
@@ -49,7 +56,10 @@
       %main.mdl-layout__content
         #content
           #blog-listpage-container
-            %h2 List of |~~ .Title ~~|
+            %h2 List of Section: |~~ .Title ~~|
+            %a{href: "|~~ .RSSlink ~~|", type: "application/rss+xml", target: "_blank"}
+              .icon.rss{style: "zoom: 2"}
+                %span
             -# ページめくり
             .paginator.text-center
               |~~ if .Paginator.HasPrev ~~|

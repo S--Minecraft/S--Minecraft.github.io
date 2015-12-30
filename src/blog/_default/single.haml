@@ -8,12 +8,12 @@
     %title |~~ .Title ~~| - Blog | S--Minecraft
     %meta{name: "description", content: "S__Minecraftのポートフォリオです"}
     
-    %link{rel: "stylesheet", href: "../../lib/material.min.css"}
+    %link{rel: "stylesheet", href: "../../../lib/material.min.css"}
     %link{rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons"}
-    %script{type: "text/javascript", src: "../../lib/material.min.js"}
+    %script{type: "text/javascript", src: "../../../lib/material.min.js"}
     
-    %link{rel: "icon", sizes: "16x16 32x32 48x48 128x128 256x256", href: "../../img/favicon.ico"}
-    %link{rel: "stylesheet", href: "../../css/core.css"}
+    %link{rel: "icon", sizes: "16x16 32x32 48x48 128x128 256x256", href: "../../../img/favicon.ico"}
+    %link{rel: "stylesheet", href: "../../../css/core.css"}
   %body
     .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
       -# Header
@@ -22,27 +22,27 @@
           %span.mdl-layout-title S--Minecraft
           .mdl-layout-spacer
           %nav.mdl-navigation.mdl-layout--large-screen-only
-            %a.mdl-navigation__link{href: "../../profile"} Profile
-            %a.mdl-navigation__link{href: "../../works"} Works
-            %a.mdl-navigation__link{href: "../../blog"} Blog
-            %a.mdl-navigation__link{href: "../../contact"} Contact
+            %a.mdl-navigation__link{href: "../../../profile"} Profile
+            %a.mdl-navigation__link{href: "../../../works"} Works
+            %a.mdl-navigation__link{href: "../../../blog"} Blog
+            %a.mdl-navigation__link{href: "../../../contact"} Contact
       -# Menu
       .mdl-layout__drawer
         %span.mdl-layout-title S--Minecraft
         %nav.mdl-navigation
-          %a.mdl-navigation__link{href: "../../"}
+          %a.mdl-navigation__link{href: "../../../"}
             %i.material-icons.md-18 home
             Top
-          %a.mdl-navigation__link{href: "../../profile"}
+          %a.mdl-navigation__link{href: "../../../profile"}
             %i.material-icons.md-18 face
             Profile
-          %a.mdl-navigation__link{href: "../../works"}
+          %a.mdl-navigation__link{href: "../../../works"}
             %i.material-icons.md-18 dashboard
             Works
-          %a.mdl-navigation__link{href: "../../blog"}
+          %a.mdl-navigation__link{href: "../../../blog"}
             %i.material-icons.md-18 subject
             Blog
-          %a.mdl-navigation__link{href: "../../contact"}
+          %a.mdl-navigation__link{href: "../../../contact"}
             %i.material-icons.md-18 question_answer
             Contact
       -# Content
@@ -50,6 +50,10 @@
         #content
           #blog-singlepage-container
             %h1 |~~ .Title ~~|
+            .section
+              |~~ with .Section ~~|
+              %a{href: "../../|~~ . ~~|"}|~~ . ~~|
+              |~~ end ~~|
             .categories
               |~~ range .Params.categories ~~|
               %a{href: "../categories/|~~ . ~~|"} |~~ . ~~|
