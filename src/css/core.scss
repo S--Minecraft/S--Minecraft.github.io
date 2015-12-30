@@ -5,6 +5,9 @@ footer, .mdl-mini-footer {
 #top-page-container {
   box-sizing: border-box;
   background: url("../img/top-background.png");
+  h1 {
+    overflow-wrap: break-word;
+  }
 }
 
 #profile-page-container {
