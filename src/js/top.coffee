@@ -7,7 +7,7 @@ fixContainer = ->
 document.on("DOMContentLoaded", ->
   fixContainer()
   return
-, false)
+)
 
 timer = false
 window.on("resize", ->
@@ -18,4 +18,4 @@ window.on("resize", ->
     return
   , 200)
   return
-, false)
+)

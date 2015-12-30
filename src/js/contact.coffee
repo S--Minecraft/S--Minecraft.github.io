@@ -22,18 +22,18 @@ send = ->
       $status.addClass("error")
       $button.rmvAttr("disabled")
     return
-  , false)
+  )
   xhr.on("timeout", ->
     $status.innerHTML = "<i class=\"material-icons\">error</i>Errored requesting has been timeout"
     $status.removeClass("success")
     $status.addClass("error")
     $button.rmvAttr("disabled")
     return
-  , false)
+  )
   xhr.on("loadstart", ->
     $button.attr("disabled", true)
     return
-  , false)
+  )
   xhr.open("POST", "https://script.google.com/macros/s/AKfycbw4z8qk2haZYjgaB_W9noCGttOIk7JJiscsCENtQhjG1hN2JfG8/exec")
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
   data = "from_email="+$$.I("email").value
@@ -57,11 +57,11 @@ form = ->
       $status.removeClass("success")
       $status.addClass("error")
     return
-  , false)
+  )
   return
 
 document.on("DOMContentLoaded", ->
   # フォーム
   form()
   return
-, false)
+)

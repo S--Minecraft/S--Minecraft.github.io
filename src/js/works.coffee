@@ -106,14 +106,14 @@ setupTabBarEvent = (allTag) ->
           return
         )
         return
-      , false)
+      )
   $$.I("All").on("click", ->
     $$.each($$.I("works-panels").children, (child) ->
       child.removeClass("hidden")
       return
     )
     return
-  , false)
+  )
   return
 
 setupTab = ->
@@ -144,4 +144,4 @@ document.on("DOMContentLoaded", ->
   setupTabBarEvent(allTag)
   componentHandler.upgradeDom()
   return
-, false)
+)

@@ -20,4 +20,4 @@ set = (obj) ->
 
 # Progress Bars
 for key, v of pLang
-  $$.I(key).on("mdl-componentupgraded", set(v), false)
+  $$.I(key).on("mdl-componentupgraded", set(v))
