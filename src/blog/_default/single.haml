@@ -8,12 +8,12 @@
     %title |~~ .Title ~~| - Blog | S--Minecraft
     %meta{name: "description", content: "S__Minecraftのポートフォリオです"}
     
-    %link{rel: "stylesheet", href: "|~~ .Params.hpurl ~~|lib/material.min.css"}
+    %link{rel: "stylesheet", href: "|~~ .Site.Params.hpurl ~~|lib/material.min.css"}
     %link{rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons"}
-    %script{type: "text/javascript", src: "|~~ .Params.hpurl ~~|lib/material.min.js"}
+    %script{type: "text/javascript", src: "|~~ .Site.Params.hpurl ~~|lib/material.min.js"}
     
-    %link{rel: "icon", sizes: "16x16 32x32 48x48 128x128 256x256", href: "|~~ .Params.hpurl ~~|img/favicon.ico"}
-    %link{rel: "stylesheet", href: "|~~ .Params.hpurl ~~|css/core.css"}
+    %link{rel: "icon", sizes: "16x16 32x32 48x48 128x128 256x256", href: "|~~ .Site.Params.hpurl ~~|img/favicon.ico"}
+    %link{rel: "stylesheet", href: "|~~ .Site.Params.hpurl ~~|css/core.css"}
   %body
     .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
       -# Header
@@ -22,27 +22,27 @@
           %span.mdl-layout-title S--Minecraft
           .mdl-layout-spacer
           %nav.mdl-navigation.mdl-layout--large-screen-only
-            %a.mdl-navigation__link{href: "|~~ .Params.hpurl ~~|profile"} Profile
-            %a.mdl-navigation__link{href: "|~~ .Params.hpurl ~~|works"} Works
-            %a.mdl-navigation__link{href: "|~~ .Params.hpurl ~~|blog"} Blog
-            %a.mdl-navigation__link{href: "|~~ .Params.hpurl ~~|contact"} Contact
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|profile"} Profile
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|works"} Works
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|blog"} Blog
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|contact"} Contact
       -# Menu
       .mdl-layout__drawer
         %span.mdl-layout-title S--Minecraft
         %nav.mdl-navigation
-          %a.mdl-navigation__link{href: "|~~ .Params.hpurl ~~|"}
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|"}
             %i.material-icons.md-18 home
             Top
-          %a.mdl-navigation__link{href: "|~~ .Params.hpurl ~~|profile"}
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|profile"}
             %i.material-icons.md-18 face
             Profile
-          %a.mdl-navigation__link{href: "|~~ .Params.hpurl ~~|works"}
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|works"}
             %i.material-icons.md-18 dashboard
             Works
-          %a.mdl-navigation__link{href: "|~~ .Params.hpurl ~~|blog"}
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|blog"}
             %i.material-icons.md-18 subject
             Blog
-          %a.mdl-navigation__link{href: "|~~ .Params.hpurl ~~|contact"}
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|contact"}
             %i.material-icons.md-18 question_answer
             Contact
       -# Content
