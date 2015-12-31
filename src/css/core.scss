@@ -112,9 +112,16 @@ footer, .mdl-mini-footer {
   }
   .mdl-card {
     padding: 5px;
+    h2 {
+      margin: 0;
+    }
     p {
       color: #333333;
+      margin: 0;
     }
+  }
+  .word {
+    text-align: right;
   }
   .time {
     text-align: right;
@@ -170,6 +177,17 @@ footer, .mdl-mini-footer {
     }
     #data {
       padding-bottom: 20px;
+    }
+    .content {
+      padding-bottom: 20px;
+    }
+    .prev {
+      float: left;
+      text-align: left;
+    }
+    .next {
+      float: right;
+      text-align: right;
     }
   }
 }
