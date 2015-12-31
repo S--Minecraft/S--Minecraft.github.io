@@ -9,3 +9,5 @@ taxonomies:
 author:
   name: "S__Minecraft"
 paginate: 15
+params:
+  hpurl: "http://s--minecraft.github.io/"

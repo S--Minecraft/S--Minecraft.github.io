@@ -8,14 +8,14 @@
     %title Category: |~~ .Title ~~| - Blog | S--Minecraft
     %meta{name: "description", content: "S__Minecraftのポートフォリオです"}
     
-    %link{rel: "stylesheet", href: "../../../lib/material.min.css"}
+    %link{rel: "stylesheet", href: "|~~ .Site.Params.hpurl ~~|lib/material.min.css"}
     %link{rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons"}
-    %script{type: "text/javascript", src: "../../../lib/material.min.js"}
+    %script{type: "text/javascript", src: "|~~ .Site.Params.hpurl ~~|lib/material.min.js"}
     
-    %link{rel: "icon", sizes: "16x16 32x32 48x48 128x128 256x256", href: "../../../img/favicon.ico"}
-    %link{rel: "stylesheet", href: "../../../css/core.css"}
+    %link{rel: "icon", sizes: "16x16 32x32 48x48 128x128 256x256", href: "|~~ .Site.Params.hpurl ~~|img/favicon.ico"}
+    %link{rel: "stylesheet", href: "|~~ .Site.Params.hpurl ~~|css/core.css"}
     
-    %link{rel: "stylesheet", href: "../../../lib/dark.css"}
+    %link{rel: "stylesheet", href: "|~~ .Site.Params.hpurl ~~|lib/dark.css"}
     
     |~~ if .RSSlink ~~|
     %link{href: "|~~ .RSSlink ~~|", rel: "alternate", type: "application/rss+xml", title: "S--Minecraft.github.io"}
@@ -29,27 +29,27 @@
           %span.mdl-layout-title S--Minecraft
           .mdl-layout-spacer
           %nav.mdl-navigation.mdl-layout--large-screen-only
-            %a.mdl-navigation__link{href: "../../../profile"} Profile
-            %a.mdl-navigation__link{href: "../../../works"} Works
-            %a.mdl-navigation__link{href: "../../../blog"} Blog
-            %a.mdl-navigation__link{href: "../../../contact"} Contact
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|profile"} Profile
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|works"} Works
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|blog"} Blog
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|contact"} Contact
       -# Menu
       .mdl-layout__drawer
         %span.mdl-layout-title S--Minecraft
         %nav.mdl-navigation
-          %a.mdl-navigation__link{href: "../../../"}
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|"}
             %i.material-icons.md-18 home
             Top
-          %a.mdl-navigation__link{href: "../../../profile"}
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|profile"}
             %i.material-icons.md-18 face
             Profile
-          %a.mdl-navigation__link{href: "../../../works"}
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|works"}
             %i.material-icons.md-18 dashboard
             Works
-          %a.mdl-navigation__link{href: "../../../blog"}
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|blog"}
             %i.material-icons.md-18 subject
             Blog
-          %a.mdl-navigation__link{href: "../../../contact"}
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|contact"}
             %i.material-icons.md-18 question_answer
             Contact
       -# Content
@@ -112,7 +112,7 @@
                 %ul
                   |~~ range $name, $value := $.Site.Sections ~~|
                   %li
-                    %a{href: "../|~~ $name ~~|"} |~~ $name ~~| (|~~ .Count ~~|)
+                    %a{href: "|~~ $.Site.BaseURL ~~||~~ $name ~~|"} |~~ $name ~~| (|~~ .Count ~~|)
                   |~~ end ~~|
               #categories
                 %h3
@@ -121,7 +121,7 @@
                 %ul
                   |~~ range $name, $value := $.Site.Taxonomies.categories ~~|
                   %li
-                    %a{href: "../|~~ $name ~~|"} |~~ $name ~~| (|~~ .Count ~~|)
+                    %a{href: "|~~ $.Site.BaseURL ~~|categories/|~~ $name ~~|"} |~~ $name ~~| (|~~ .Count ~~|)
                   |~~ end ~~|
               #tags
                 %h3
@@ -130,7 +130,7 @@
                 %ul
                   |~~ range $name, $value := $.Site.Taxonomies.tags ~~|
                   %li
-                    %a{href: "../../tags/|~~ $name ~~|"} |~~ $name ~~| (|~~ .Count ~~|)
+                    %a{href: "|~~ $.Site.BaseURL ~~|tags/|~~ $name ~~|"} |~~ $name ~~| (|~~ .Count ~~|)
                   |~~ end ~~|
       -# Footer
       %footer.mdl-mini-footer
