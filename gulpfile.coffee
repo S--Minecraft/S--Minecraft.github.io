@@ -23,7 +23,7 @@ rtasks = ["js-min", "html-min", "css-min", "r-icons", "r-img", "r-lib"]
 gulp.task "release", rtasks
 
 gulp.task "clean", (cb) ->
-  return del ["./bin/**", "./release/**"], cb
+  return del ["./bin/**", "./release/**", "./hugo/publish/**"], cb
 
 gulp.task "watch", ["default"], ->
   gulp.watch "./src/**/*.coffee", ["coffee"]
