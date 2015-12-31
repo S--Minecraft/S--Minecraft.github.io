@@ -15,6 +15,9 @@ footer, .mdl-mini-footer {
 
 #profile-page-container {
   #profile-card {
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
     img {
       margin-top: 10px;
       margin-bottom: 10px;
@@ -23,14 +26,11 @@ footer, .mdl-mini-footer {
       float: right;
     }
   }
-  > * {
-    padding-bottom: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-
-    .mdl-progress {
-      width: 90%;
-    }
+  .mdl-progress {
+    width: 90%;
+  }
+  .h4 {
+    margin: 0;
   }
   > #enviroment > .mdl-grid {
     padding: 0;
@@ -46,10 +46,6 @@ footer, .mdl-mini-footer {
 
 #works-page-container {
   #works-panels {
-    .work {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
     #buttons {
       display: flex;
       flex-direction: row;
@@ -57,6 +53,12 @@ footer, .mdl-mini-footer {
     }
     button {
       margin-right: 10px;
+    }
+    .h4 {
+      margin: 0;
+    }
+    ul {
+      margin: 0 10px 10px 0;
     }
     li {
       background: rgba(158,158,158,.2);
@@ -83,10 +85,10 @@ footer, .mdl-mini-footer {
   #form, #details {
     >.mdl-card {
       width: 100%;
-      padding-left: 5px;
-      padding-right: 5px;
-      padding-bottom: 5px;
 
+      .h4 {
+        margin: 0;
+      }
       form > * {
         width: 100%;
       }

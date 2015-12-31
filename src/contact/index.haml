@@ -51,45 +51,49 @@
           #contact-page-container.mdl-grid
             #form.mdl-cell.mdl-cell--8-col
               .mdl-card.mdl-shadow--3dp
-                %h2.h4 Contact
-                %form#form-main{action: "#"}
-                  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                    %input.mdl-textfield__input#name{type: "text", required: true}
-                    %label.mdl-textfield__label{for: "name"} Name
-                  %br
-                  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                    %input.mdl-textfield__input#email{type: "email", required: true}
-                    %label.mdl-textfield__label{for: "email"} Email Address
-                  %br
-                  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                    %input.mdl-textfield__input#title{type: "text", required: true}
-                    %label.mdl-textfield__label{for: "title"} Title
-                  %br
-                  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                    %textarea.mdl-textfield__input#message{type: "text", rows: "5", required: true}
-                    %label.mdl-textfield__label{for: "message"} Message
-                  %br
-                  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                    %input.mdl-textfield__input#url{type: "text", required: true}
-                    %label.mdl-textfield__label{for: "url"} Enter this page's url
-                  %input#submit.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect{type: "submit"}
-                %p#status
+                .mdl-card__title
+                  %h2.h4.mdl-card__title-text Contact
+                .mdl-card__supporting-text
+                  %form#form-main{action: "#"}
+                    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                      %input.mdl-textfield__input#name{type: "text", required: true}
+                      %label.mdl-textfield__label{for: "name"} Name
+                    %br
+                    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                      %input.mdl-textfield__input#email{type: "email", required: true}
+                      %label.mdl-textfield__label{for: "email"} Email Address
+                    %br
+                    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                      %input.mdl-textfield__input#title{type: "text", required: true}
+                      %label.mdl-textfield__label{for: "title"} Title
+                    %br
+                    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                      %textarea.mdl-textfield__input#message{type: "text", rows: "5", required: true}
+                      %label.mdl-textfield__label{for: "message"} Message
+                    %br
+                    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                      %input.mdl-textfield__input#url{type: "text", required: true}
+                      %label.mdl-textfield__label{for: "url"} Enter this page's url
+                    %input#submit.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect{type: "submit"}
+                  %p#status
             #details.mdl-cell.mdl-cell--4-col
               .mdl-card.mdl-shadow--3dp
-                %h2.h4 Details
-                %dl
-                  %dt Mail
-                  %dd
-                    %a{href: "mailto:S★mail.minecraft.jp.net"} S★mail.minecraft.jp.net
-                    %br
-                    (Change ★ to @)
-                  %dt Address
-                  %dd Inside a gray part of the redstone block
-                  %dt Other Contacts
-                  %dd
-                    Please see the
-                    %a{href: "../profile"} Profile
-                    \ page
+                .mdl-card__title
+                  %h2.h4.mdl-card__title-text Details
+                .mdl-card__supporting-text
+                  %dl
+                    %dt Mail
+                    %dd
+                      %a{href: "mailto:S★mail.minecraft.jp.net"} S★mail.minecraft.jp.net
+                      %br
+                      (Change ★ to @)
+                    %dt Address
+                    %dd Inside a gray part of the redstone block
+                    %dt Other Contacts
+                    %dd
+                      Please see the
+                      %a{href: "../profile"} Profile
+                      \ page
       -# Footer
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section

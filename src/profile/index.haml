@@ -77,79 +77,89 @@
                 %a.icon.twitter{title: "Follow me on twitter!", href: "https://twitter.com/S__Minecraft"}
                   %span Twitter
             #programming.mdl-cell.mdl-cell--4-col.md-card.mdl-shadow--3dp
-              %h2.h4 Programming Languages
-              %dl
-                %dt Coffeescript
-                %dd
-                  #Coffee.mdl-progress.mdl-js-progress
-                %dt Javascript
-                %dd
-                  #Javascript.mdl-progress.mdl-js-progress
-                %dt Go
-                %dd
-                  #Go.mdl-progress.mdl-js-progress
-                %dt Java
-                %dd
-                  #Java.mdl-progress.mdl-js-progress
-                %dt Swift
-                %dd
-                  #Swift.mdl-progress.mdl-js-progress
-                %dt Typescript
-                %dd
-                  #Typescript.mdl-progress.mdl-js-progress
-                %dt C#
-                %dd
-                  #CS.mdl-progress.mdl-js-progress
-                %dt C/C++
-                %dd
-                  #C.mdl-progress.mdl-js-progress
-                %dt Haskell
-                %dd
-                  #Haskell.mdl-progress.mdl-js-progress.mdl-progress__indeterminate
+              .mdl-card__title
+                %h2.mdl-card__title-text.h4 Programming Languages
+              .mdl-card__supporting-text
+                %dl
+                  %dt Coffeescript
+                  %dd
+                    #Coffee.mdl-progress.mdl-js-progress
+                  %dt Javascript
+                  %dd
+                    #Javascript.mdl-progress.mdl-js-progress
+                  %dt Go
+                  %dd
+                    #Go.mdl-progress.mdl-js-progress
+                  %dt Java
+                  %dd
+                    #Java.mdl-progress.mdl-js-progress
+                  %dt Swift
+                  %dd
+                    #Swift.mdl-progress.mdl-js-progress
+                  %dt Typescript
+                  %dd
+                    #Typescript.mdl-progress.mdl-js-progress
+                  %dt C#
+                  %dd
+                    #CS.mdl-progress.mdl-js-progress
+                  %dt C/C++
+                  %dd
+                    #C.mdl-progress.mdl-js-progress
+                  %dt Haskell
+                  %dd
+                    #Haskell.mdl-progress.mdl-js-progress.mdl-progress__indeterminate
             #markup.mdl-cell.mdl-cell--4-col.md-card.mdl-shadow--3dp
-              %h2.h4 Markup Languages
-              %dl
-                %dt HTML/CSS
-                %dd
-                  #HTML.mdl-progress.mdl-js-progress
-                %dt Haml
-                %dd
-                  #Haml.mdl-progress.mdl-js-progress
-                %dt SCSS
-                %dd
-                  #SCSS.mdl-progress.mdl-js-progress
+              .mdl-card__title
+                %h2.h4.mdl-card__title-text Markup Languages
+              .mdl-card__supporting-text
+                %dl
+                  %dt HTML/CSS
+                  %dd
+                    #HTML.mdl-progress.mdl-js-progress
+                  %dt Haml
+                  %dd
+                    #Haml.mdl-progress.mdl-js-progress
+                  %dt SCSS
+                  %dd
+                    #SCSS.mdl-progress.mdl-js-progress
             #enviroment.mdl-cell.mdl-cell--4-col.mdl-cell--8-col-tablet.md-card.mdl-shadow--3dp
-              %h2.h4 Enviroment
-              %p Only major ones I use.
-              .mdl-grid
-                .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet
-                  %dl
-                    %dt OS
-                    %dd Windows 8.1
-                    %dt Video Editing
-                    %dd AviUtl
-                    %dt Image Editing
-                    %dd krita
-                    %dd JTrim
-                    %dd pixia
-                    %dd paint
-                .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet
-                  %dl
-                    %dt Text Editing
-                    %dd Mery
-                    %dt IDE
-                    %dd Eclipse
-                    %dd Visual Studio
+              .mdl-card__title
+                %h2.h4.mdl-card__title-text Enviroment
+              .mdl-card__supporting-text
+                %p Only major ones I use.
+                .mdl-grid
+                  .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet
+                    %dl
+                      %dt OS
+                      %dd Windows 8.1
+                      %dt Video Editing
+                      %dd AviUtl
+                      %dt Image Editing
+                      %dd krita
+                      %dd JTrim
+                      %dd pixia
+                      %dd paint
+                  .mdl-cell.mdl-cell--6-col.mdl-cell--4-col-tablet
+                    %dl
+                      %dt Text Editing
+                      %dd Mery
+                      %dt IDE
+                      %dd Eclipse
+                      %dd Visual Studio
             #twitter.mdl-cell.mdl-cell--6-col.md-card.mdl-shadow--3dp
-              %h2.h4 Twitter
-              -# #twitter-timeline
-              %a.twitter-timeline{href: "https://twitter.com/S__Minecraft", "data-widget-id": "679237762432675841"} @S__Minecraftさんのツイート
-              :javascript
-                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+              .mdl-card__title
+                %h2.h4.mdl-card__title-text Twitter
+              .mdl-card__supporting-text
+                -# #twitter-timeline
+                %a.twitter-timeline{href: "https://twitter.com/S__Minecraft", "data-widget-id": "679237762432675841"} @S__Minecraftさんのツイート
+                :javascript
+                  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
             #github.mdl-cell.mdl-cell--6-col.md-card.mdl-shadow--3dp
-              %h2.h4 GitHub
-              .github-card{"data-user": "S--Minecraft", "data-theme": "medium"}
-              %script{src: "//cdn.jsdelivr.net/github-cards/latest/widget.js", async: true}
+              .mdl-card__title
+                %h2.h4.mdl-card__title-text GitHub
+              .mdl-card__supporting-text
+                .github-card{"data-user": "S--Minecraft", "data-theme": "medium"}
+                %script{src: "//cdn.jsdelivr.net/github-cards/latest/widget.js", async: true}
       -# Footer
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
