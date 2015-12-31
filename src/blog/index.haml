@@ -57,7 +57,7 @@
         #content
           #blog-page-container.mdl-grid
             #main.mdl-cell.mdl-cell--8-col
-              %h2 What's New
+              %h2 Blog Articles
               -# ページめくり
               .paginator.text-center
                 |~~ if .Paginator.HasPrev ~~|
@@ -74,16 +74,16 @@
                 %button.mdl-button.mdl-js-button.mdl-js-ripple-effect{disabled: true} ->
                 |~~ end ~~|
               #articles.mdl-grid
-                |~~ range first 16 .Site.Pages ~~|
-                .mdl-cell.mdl-cell--6-col.mdl-card.mdl-shadow--3dp
+                |~~ range (.Paginator 15).Pages ~~|
+                .mdl-cell.mdl-cell--4-col.mdl-card.mdl-shadow--3dp
                   .mdl-card__title.mdl-card--expand
                     %h2.h4 |~~ .Title ~~|
                   .mdl-card__supporting-text
-                    .desc
+                    %p.desc
                       |~~ .Summary ~~|
-                    .time
+                    %p.time
                       %time{datetime: "|~~ .Date.Format ~~2006-01-02~~ ~~|"} |~~ .Date.Format ~~2006-01-02~~ ~~|
-                  .mdl-card__actions.mdl-card--border
+                  .mdl-card__actions
                     %a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect{href: "|~~ .Permalink ~~|"} View
                 |~~ end ~~|
               -# ページめくり2
@@ -103,26 +103,35 @@
                 |~~ end ~~|
             #side.mdl-cell.mdl-cell--4-col
               %a{href: "|~~ .RSSlink ~~|", type: "application/rss+xml", target: "_blank"}
-                .icon.rss{style: "zoom: 2"}
+                .icon.rss
                   %span
               #sections
-                %h3 書庫一覧
-                |~~ range $name, $value := $.Site.Sections ~~|
-                %li
-                  %a{href: "|~~ $name ~~|"} |~~ $name ~~| (|~~ .Count ~~|)
-                |~~ end ~~|
+                %h3
+                  %i.material-icons folder
+                  書庫一覧
+                %ul
+                  |~~ range $name, $value := $.Site.Sections ~~|
+                  %li
+                    %a{href: "|~~ $name ~~|"} |~~ $name ~~| (|~~ .Count ~~|)
+                  |~~ end ~~|
               #categories
-                %h3 カテゴリ一覧
-                |~~ range $name, $value := $.Site.Taxonomies.categories ~~|
-                %li
-                  %a{href: "categories/|~~ $name ~~|"} |~~ $name ~~| (|~~ .Count ~~|)
-                |~~ end ~~|
+                %h3
+                  %i.material-icons class
+                  カテゴリ一覧
+                %ul
+                  |~~ range $name, $value := $.Site.Taxonomies.categories ~~|
+                  %li
+                    %a{href: "categories/|~~ $name ~~|"} |~~ $name ~~| (|~~ .Count ~~|)
+                  |~~ end ~~|
               #tags
-                %h3 タグ一覧
-                |~~ range $name, $value := $.Site.Taxonomies.tags ~~|
-                %li
-                  %a{href: "tags/|~~ $name ~~|"} |~~ $name ~~| (|~~ .Count ~~|)
-                |~~ end ~~|
+                %h3
+                  %i.material-icons label
+                  タグ一覧
+                %ul
+                  |~~ range $name, $value := $.Site.Taxonomies.tags ~~|
+                  %li
+                    %a{href: "tags/|~~ $name ~~|"} |~~ $name ~~| (|~~ .Count ~~|)
+                  |~~ end ~~|
       -# Footer
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
