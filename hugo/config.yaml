@@ -8,3 +8,4 @@ taxonomies:
   category: "categories"
 author:
   name: "S__Minecraft"
+paginate: 15

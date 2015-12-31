@@ -74,7 +74,7 @@
                 %button.mdl-button.mdl-js-button.mdl-js-ripple-effect{disabled: true} ->
                 |~~ end ~~|
               #articles.mdl-grid
-                |~~ range (.Paginator 15).Pages ~~|
+                |~~ range .Paginator.Pages ~~|
                 .mdl-cell.mdl-cell--4-col.mdl-card.mdl-shadow--3dp
                   .mdl-card__title.mdl-card--expand
                     %h2.h4 |~~ .Title ~~|
@@ -83,7 +83,7 @@
                       |~~ .Summary ~~|
                     %p.time
                       %time{datetime: "|~~ .Date.Format ~~2006-01-02~~ ~~|"} |~~ .Date.Format ~~2006-01-02~~ ~~|
-                  .mdl-card__actions
+                  .mdl-card__actions.mdl-card--border
                     %a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect{href: "|~~ .Permalink ~~|"} View
                 |~~ end ~~|
               -# ページめくり2
