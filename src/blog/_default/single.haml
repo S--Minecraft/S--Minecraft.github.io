@@ -1,0 +1,93 @@
+!!!5
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+    %meta{"http-equiv": "X-UA-Compatible", content: "IE=edge"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
+    
+    %title |~~ .Title ~~| - Blog | S--Minecraft
+    %meta{name: "description", content: "S__Minecraftのポートフォリオです"}
+    
+    %link{rel: "stylesheet", href: "|~~ .Site.Params.hpurl ~~|lib/material.min.css"}
+    %link{rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons"}
+    %script{type: "text/javascript", src: "|~~ .Site.Params.hpurl ~~|lib/material.min.js"}
+    
+    %link{rel: "icon", sizes: "16x16 32x32 48x48 128x128 256x256", href: "|~~ .Site.Params.hpurl ~~|img/favicon.ico"}
+    %link{rel: "stylesheet", href: "|~~ .Site.Params.hpurl ~~|css/core.css"}
+  %body
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+      -# Header
+      %header.mdl-layout__header
+        .mdl-layout__header-row
+          %span.mdl-layout-title S--Minecraft
+          .mdl-layout-spacer
+          %nav.mdl-navigation.mdl-layout--large-screen-only
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|profile"} Profile
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|works"} Works
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|blog"} Blog
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|contact"} Contact
+      -# Menu
+      .mdl-layout__drawer
+        %span.mdl-layout-title S--Minecraft
+        %nav.mdl-navigation
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|"}
+            %i.material-icons.md-18 home
+            Top
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|profile"}
+            %i.material-icons.md-18 face
+            Profile
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|works"}
+            %i.material-icons.md-18 dashboard
+            Works
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|blog"}
+            %i.material-icons.md-18 subject
+            Blog
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|contact"}
+            %i.material-icons.md-18 question_answer
+            Contact
+      -# Content
+      %main.mdl-layout__content
+        #content
+          #blog-singlepage-container
+            #ribbon
+            .mdl-grid
+              .mdl-cell.mdl-cell--2-col.mdl-cell--hide-tablet.mdl-cell--hide-iphone
+              %article.mdl-color--white.mdl-shadow--4dp.mdl-color-text--grey-800.mdl-cell.mdl-cell--8-col
+                %h1.text-center |~~ .Title ~~|
+                %p.time
+                  %time{datetime: "|~~ .Date.Format ~~2006-01-02~~ ~~|"} |~~ .Date.Format ~~2006-01-02~~ ~~|
+                #data
+                  |~~ with .Section ~~|
+                  .section
+                    %i.material-icons folder
+                    %a{href: "|~~ $.Site.BaseURL ~~||~~ . ~~|"}|~~ . ~~|
+                  |~~ end ~~|
+                  |~~ if .Params.categories ~~|
+                  .categories
+                    %i.material-icons class
+                    |~~ range .Params.categories ~~|
+                    %a{href: "|~~ $.Site.BaseURL ~~|categories/|~~ . ~~|"} |~~ . ~~|
+                    |~~ end ~~|
+                  |~~ end ~~|
+                  |~~ if .Params.tags ~~|
+                  .tags
+                    %i.material-icons label
+                    |~~ range .Params.tags ~~|
+                    %a{href: "|~~ $.Site.BaseURL ~~|tags/|~~ . ~~|"} |~~ . ~~|
+                    |~~ end ~~|
+                  |~~ end ~~|
+                .content
+                  |~~ .Content ~~|
+                %p.prev
+                  |~~ if .Prev ~~|
+                  %a{href: "|~~ .Prev.Permalink ~~|"} <-
+                  |~~ end ~~|
+                %p.next
+                  |~~ if .Next ~~|
+                  %a{href: "|~~ .Next.Permalink ~~|"} ->
+                  |~~ end ~~|
+      -# Footer
+      %footer.mdl-mini-footer
+        .mdl-mini-footer__left-section
+          %p (C) 2015 S__Minecraft
+

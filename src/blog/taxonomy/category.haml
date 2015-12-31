@@ -5,7 +5,7 @@
     %meta{"http-equiv": "X-UA-Compatible", content: "IE=edge"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
     
-    %title Blog | S--Minecraft
+    %title Category: |~~ .Title ~~| - Blog | S--Minecraft
     %meta{name: "description", content: "S__Minecraftのポートフォリオです"}
     
     %link{rel: "stylesheet", href: "|~~ .Site.Params.hpurl ~~|lib/material.min.css"}
@@ -31,7 +31,7 @@
           %nav.mdl-navigation.mdl-layout--large-screen-only
             %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|profile"} Profile
             %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|works"} Works
-            %a.mdl-navigation__link{href: ""} Blog
+            %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|blog"} Blog
             %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|contact"} Contact
       -# Menu
       .mdl-layout__drawer
@@ -46,7 +46,7 @@
           %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|works"}
             %i.material-icons.md-18 dashboard
             Works
-          %a.mdl-navigation__link{href: ""}
+          %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|blog"}
             %i.material-icons.md-18 subject
             Blog
           %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|contact"}
@@ -55,9 +55,9 @@
       -# Content
       %main.mdl-layout__content
         #content
-          #blog-page-container.mdl-grid
+          #blog-listpage-container.mdl-grid
             #main.mdl-cell.mdl-cell--8-col
-              %h2 Blog Articles
+              %h2 List of Category: |~~ .Title ~~|
               -# ページめくり
               .paginator.text-center
                 |~~ if .Paginator.HasPrev ~~|
@@ -81,7 +81,6 @@
                   .mdl-card__supporting-text
                     %p.desc
                       |~~ .Summary ~~|
-                    %p.word (|~~ .WordCount ~~|語)
                     %p.time
                       %time{datetime: "|~~ .Date.Format ~~2006-01-02~~ ~~|"} |~~ .Date.Format ~~2006-01-02~~ ~~|
                   .mdl-card__actions.mdl-card--border
@@ -137,6 +136,3 @@
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
           %p (C) 2015 S__Minecraft
-    
-    %script{type: "text/javascript", src: "../lib/shortQuery.min.js"}
-    %script{type: "text/javascript", src: "../js/core.js"}

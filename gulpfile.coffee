@@ -1,3 +1,4 @@
+exec = require("child_process").exec
 gulp = require "gulp"
 del = require "del"
 notify = require "gulp-notify"
@@ -11,9 +12,12 @@ uglify = require "gulp-uglify"
 htmlmin = require "gulp-htmlmin"
 cssnano = require "gulp-cssnano"
 inlineSource = require "gulp-inline-source"
+replace = require "gulp-replace"
 
 tasks = ["coffee", "haml", "scss", "icons", "img", "lib"]
 gulp.task "default", tasks
+
+gulp.task "hugo", ["hugo-run"]
 
 rtasks = ["js-min", "html-min", "css-min", "r-icons", "r-img", "r-lib"]
 gulp.task "release", rtasks
@@ -45,20 +49,20 @@ gulp.task "haml", ->
     .pipe(gulp.dest("./bin"))
 
 gulp.task "scss", ->
-  return gulp.src ["./src/**/*.scss"]
+  return gulp.src "./src/**/*.scss"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin"))
     .pipe(sass())
     .pipe(gulp.dest("./bin"))
 
 gulp.task "icons", ->
-  return gulp.src ["./src/css/icons/**/*.svg"]
+  return gulp.src "./src/css/icons/**/*.svg"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin/css/icons"))
     .pipe(gulp.dest("./bin/css/icons"))
 
 gulp.task "img", ->
-  return gulp.src ["./src/img/**"]
+  return gulp.src "./src/img/**"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin/img"))
     .pipe(gulp.dest("./bin/img"))
@@ -75,6 +79,24 @@ gulp.task "lib-copy", ->
     .pipe(changed("./bin/lib"))
     .pipe(gulp.dest("./bin/lib"))
 
+gulp.task "hugo-set", ["haml"], ->
+  return gulp.src "./bin/blog/**"
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(replace("|~~", "{{"))
+    .pipe(replace("~~|", "}}"))
+    .pipe(replace("~~", '"'))
+    .pipe(changed("./hugo/layouts"))
+    .pipe(gulp.dest("./hugo/layouts"))
+
+gulp.task "hugo-run", ["hugo-set"], (cb) ->
+  exec("cd hugo&&hugo", (err, stdout, stderr) ->
+    console.log stdout
+    console.log stderr
+    cb(err)
+    return
+  )
+  return
+
 gulp.task "lib", ["lib-bower", "lib-copy"]
 
 gulp.task "js-min", ["coffee"], ->
@@ -90,8 +112,13 @@ gulp.task "html-in", ["haml"], ->
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./release"))
 
-gulp.task "html-min", ["html-in"], ->
-  return gulp.src ["./bin/**/*.html", "!./bin/404.html", "!./bin/500.html", "!./bin/503.html"]
+gulp.task "hugo-copy", ["hugo"], ->
+  return gulp.src "./hugo/public/**"
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(gulp.dest("./release/blog"))
+
+gulp.task "html-min", ["html-in", "hugo-copy"], ->
+  return gulp.src ["./bin/**/*.html", "!./bin/404.html", "!./bin/500.html", "!./bin/503.html", "!./bin/blog/**"]
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./release"))
