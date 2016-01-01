@@ -1,7 +1,14 @@
+main {
+  overflow: visible !important;
+}
+
 footer, .mdl-mini-footer {
   padding: 8px 16px;
   a {
     color: inherit;
+  }
+  p {
+    margin: 0 0 5px;
   }
 }
 
