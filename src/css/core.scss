@@ -207,6 +207,25 @@ footer, .mdl-mini-footer {
   }
 }
 
+#links-page-container {
+  .link {
+    position: relative;
+    h3 {
+      width: 75%
+    }
+    .twiicon {
+      position: absolute;
+      top: 10%;
+      right: 0;
+      padding: 5px;
+      margin-right: 10px;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
 /*
   Util
 */
