@@ -1,5 +1,7 @@
-main {
-  overflow: visible !important;
+body:not(#top-page) {
+  main {
+    overflow: visible;
+  }
 }
 
 footer, .mdl-mini-footer {
@@ -12,9 +14,16 @@ footer, .mdl-mini-footer {
   }
 }
 
+#content {
+  .h4 {
+    margin: 0;
+  }
+}
+
 #top-page-container {
   box-sizing: border-box;
   background: url("../img/top-background.png");
+  color: #FFFFFF;
   h1 {
     overflow-wrap: break-word;
   }
@@ -22,22 +31,13 @@ footer, .mdl-mini-footer {
 
 #profile-page-container {
   #profile-card {
-    padding-bottom: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    img {
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
+    padding: 10px;
     .icon {
       float: right;
     }
   }
   .mdl-progress {
     width: 90%;
-  }
-  .h4 {
-    margin: 0;
   }
   > #enviroment > .mdl-grid {
     padding: 0;
@@ -60,9 +60,6 @@ footer, .mdl-mini-footer {
     }
     button {
       margin-right: 10px;
-    }
-    .h4 {
-      margin: 0;
     }
     ul {
       margin: 0 10px 10px 0;
@@ -93,9 +90,6 @@ footer, .mdl-mini-footer {
     >.mdl-card {
       width: 100%;
 
-      .h4 {
-        margin: 0;
-      }
       form > * {
         width: 100%;
       }
@@ -265,10 +259,6 @@ footer, .mdl-mini-footer {
 //round
 .round {
   border-radius: 2px;
-}
-//color
-.white {
-  color: #FFFFFF;
 }
 //hidden
 .hidden {
