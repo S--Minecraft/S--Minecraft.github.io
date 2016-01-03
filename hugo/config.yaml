@@ -1,4 +1,4 @@
-baseurl: "http://s--minecraft.github.io/blog/"
+baseurl: "https://s--minecraft.github.io/blog/"
 title: "S--Minecraft.github.io"
 languageCode: "jp"
 copyright: "(C) 2015 S__Minecraft"
@@ -10,4 +10,4 @@ author:
   name: "S__Minecraft"
 paginate: 15
 params:
-  hpurl: "http://s--minecraft.github.io/"
+  hpurl: "https://s--minecraft.github.io/"
