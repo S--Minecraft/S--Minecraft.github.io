@@ -111,21 +111,15 @@ gulp.task "js-min", ["coffee"], ->
     .pipe(uglify())
     .pipe(gulp.dest("./release/js"))
 
-gulp.task "html-in", ["haml"], ->
-  return gulp.src ["./bin/404.html", "./bin/500.html", "./bin/503.html"]
-    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(inlineSource())
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("./release"))
-
 gulp.task "hugo-copy", ["hugo"], ->
   return gulp.src "./hugo/public/**"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(gulp.dest("./release/blog"))
 
-gulp.task "html-min", ["html-in", "hugo-copy"], ->
-  return gulp.src ["./bin/**/*.html", "!./bin/404.html", "!./bin/500.html", "!./bin/503.html", "!./bin/blog/**"]
+gulp.task "html-min", ["hugo-copy"], ->
+  return gulp.src ["./bin/**/*.html", "!./bin/blog/**"]
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(inlineSource())
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("./release"))
 
