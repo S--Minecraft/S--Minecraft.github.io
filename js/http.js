@@ -1,0 +1,1 @@
+(function(){"http:"===location.protocol&&location.replace(location.href.replace("http:","https:"))}).call(this);

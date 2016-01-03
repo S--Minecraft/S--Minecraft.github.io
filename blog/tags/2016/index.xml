@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2016 on S--Minecraft.github.io</title>
-    <link>http://s--minecraft.github.io/blog/tags/2016/</link>
+    <link>https://s--minecraft.github.io/blog/tags/2016/</link>
     <description>Recent content in 2016 on S--Minecraft.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>(C) 2015 S__Minecraft</copyright>
     <lastBuildDate>Fri, 01 Jan 2016 01:24:40 +0900</lastBuildDate>
-    <atom:link href="http://s--minecraft.github.io/blog/tags/2016/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://s--minecraft.github.io/blog/tags/2016/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>あけおめ</title>
-      <link>http://s--minecraft.github.io/blog/other/2016/</link>
+      <link>https://s--minecraft.github.io/blog/other/2016/</link>
       <pubDate>Fri, 01 Jan 2016 01:24:40 +0900</pubDate>
       
-      <guid>http://s--minecraft.github.io/blog/other/2016/</guid>
+      <guid>https://s--minecraft.github.io/blog/other/2016/</guid>
       <description>&lt;p&gt;&lt;strong&gt;あけましておめでとうございます&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;2015年中にHugoの導入を完了したいといいながら、&lt;/p&gt;
