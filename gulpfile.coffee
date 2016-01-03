@@ -45,7 +45,12 @@ gulp.task "haml", ->
   return gulp.src "./src/**/*.haml"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin"))
-    .pipe(haml({ compiler: "visionmedia" }))
+    .pipe(haml({
+      compiler: "visionmedia"
+      compilerOpts: {
+        locals: require("./src/haml.json")
+      }
+    }))
     .pipe(gulp.dest("./bin"))
 
 gulp.task "scss", ->

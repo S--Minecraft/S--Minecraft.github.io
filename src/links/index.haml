@@ -56,54 +56,19 @@
       %main.mdl-layout__content
         #content
           #links-page-container.mdl-grid
-            .link.mdl-cell.mdl-cell--4-col.md-card.mdl-shadow--3dp
-              .mdl-card__title
-                %h3 ﾓｸﾞﾓｸﾞ(๑´ㅂ`๑)ﾓｸﾞﾓｸﾞ
-              .mdl-card__supporting-text
-                %p デザインのプロ。かわいい。
-              .twiicon.mdl-shadow--2dp
-                %img{src: "http://www.paper-glasses.com/api/twipi/AyaTokikaze/bigger"}
-                %p
-                  %a{href: "https://twitter.com/AyaTokikaze"} @AyaTokikaze
-              .mdl-card__actions.mdl-card--border
-                %a{href: "https://ayatk.com/"}
-                  %button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect Go
-            .link.mdl-cell.mdl-cell--4-col.md-card.mdl-shadow--3dp
-              .mdl-card__title
-                %h3 remew.net
-              .twiicon.mdl-shadow--2dp
-                %img{src: "http://www.paper-glasses.com/api/twipi/_remew_/bigger"}
-                %p
-                  %a{href: "https://twitter.com/_remew_"} @_remew_
-              .mdl-card__supporting-text
-                %p ガチプロだし強い。れみゅーん。
-              .mdl-card__actions.mdl-card--border
-                %a{href: "http://remew.net/"}
-                  %button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect Go
-            .link.mdl-cell.mdl-cell--4-col.md-card.mdl-shadow--3dp
-              .mdl-card__title
-                %h3 snowhite.tk
-              .twiicon.mdl-shadow--2dp
-                %img{src: "http://www.paper-glasses.com/api/twipi/snowhite0804/bigger"}
-                %p
-                  %a{href: "https://twitter.com/snowhite0804"} @snowhite0804
-              .mdl-card__supporting-text
-                %p frainworksのAdminだったり強い。にゃんにゃん(?)。
-              .mdl-card__actions.mdl-card--border
-                %a{href: "http://snowhite.tk/"}
-                  %button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect Go
-            .link.mdl-cell.mdl-cell--4-col.md-card.mdl-shadow--3dp
-              .mdl-card__title
-                %h3 Elliptic-shiho.xyz
-              .twiicon.mdl-shadow--2dp
-                %img{src: "http://www.paper-glasses.com/api/twipi/elliptic_shiho/bigger"}
-                %p
-                  %a{href: "https://twitter.com/elliptic_shiho"} @elliptic_shiho
-              .mdl-card__supporting-text
-                %p 楕円関数とか暗号の人。強すぎて強すぎて。
-              .mdl-card__actions.mdl-card--border
-                %a{href: "http://elliptic-shiho.github.io/"}
-                  %button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect Go
+            - each link in links
+              .link.mdl-cell.mdl-cell--4-col.md-card.mdl-shadow--3dp
+                .mdl-card__title
+                  %h3= link.title
+                .mdl-card__supporting-text
+                  %p= link.desc
+                .twiicon.mdl-shadow--2dp
+                  %img{src: "http://www.paper-glasses.com/api/twipi/" + link.twitter + "/bigger"}
+                  %p
+                    %a{href: "https://twitter.com/" + link.twitter}= "@" + link.twitter
+                .mdl-card__actions.mdl-card--border
+                  %a{href: link.url}
+                    %button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect Go
       -# Footer
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
