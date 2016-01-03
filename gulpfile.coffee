@@ -13,6 +13,7 @@ htmlmin = require "gulp-htmlmin"
 cssnano = require "gulp-cssnano"
 inlineSource = require "gulp-inline-source"
 replace = require "gulp-replace"
+transform = require "./gulp-transform.coffee"
 
 tasks = ["coffee", "haml", "scss", "icons", "img", "lib"]
 gulp.task "default", tasks
@@ -48,7 +49,7 @@ gulp.task "haml", ->
     .pipe(haml({
       compiler: "visionmedia"
       compilerOpts: {
-        locals: require("./src/haml.json")
+        locals: transform(require("./src/haml.json"))
       }
     }))
     .pipe(gulp.dest("./bin"))

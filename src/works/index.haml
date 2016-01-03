@@ -56,7 +56,27 @@
           #works-page-container
             #works-tab.mdl-tabs.mdl-js-tabs.mdl-js-ripple-effect
               #works-tab-bar.mdl-tabs__tab-bar
+                %a#All.mdl-tabs__tab.is-active{href: "#All"} All
+                - each tag in allTag
+                  %a.mdl-tabs__tab{id: tag, href: "#"+tag}= tag
+                %a#Other.mdl-tabs__tab{href: "#Other"} Other
               #works-panels.mdl-grid
+                - each work in works
+                  %div{class: work.tagsStr+" work mdl-cell mdl-cell--4-col mdl-card mdl-shadow--3dp"}
+                    .mdl-card__title
+                      %h2.h4.mdl-card__title-text= work.name
+                    .mdl-card__supporting-text
+                      %p!= work.desc
+                    #buttons.mdl-card__actions.mdl-card--border
+                      - if (work.dl)
+                        %a{href: work.dl}
+                          %button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect Download Page
+                      - if (work.github)
+                        %a{href: work.github}
+                          %button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect GitHub
+                    %ul
+                      - each t in work.tags
+                        %li.mdl-shadow--2dp= t
       -# Footer
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
