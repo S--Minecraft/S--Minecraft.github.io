@@ -23,14 +23,14 @@ env:
 install:
   - go get -v github.com/spf13/hugo
 before_script:
-- node_modules/.bin/npm install
+- npm install
 - node_modules/.bin/bower install
 - git clone -b master https://github.com/S--Minecraft/s--minecraft.github.io release
 - pushd release
 - git checkout master
 - popd
 script:
-- gulp release
+- node_modules/.bin/gulp release
 after_success:
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/travis.key\n" >> ~/.ssh/config
 - openssl aes-256-cbc -k "$SERVER_KEY" -in travis.enc -d -a -out travis.key
