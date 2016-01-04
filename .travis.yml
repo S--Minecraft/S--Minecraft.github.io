@@ -34,7 +34,7 @@ script:
 - gulp release
 after_success:
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/travis.key\n" >> ~/.ssh/config
-- openssl aes-256-cbc -k "$SERVER_KEY" -in .travis/travis_key.enc -d -a -out travis.key
+- openssl aes-256-cbc -k "$SERVER_KEY" -in travis.enc -d -a -out travis.key
 - cp travis.key ~/.ssh/
 - chmod 600 ~/.ssh/travis.key
 - ssh-add travis.key
