@@ -41,4 +41,4 @@ after_success:
 - cd release
 - git add --all
 - git commit -m "[Travis CI] $TRAVIS_COMMIT"
-- git push git@github.com:S--Minecraft/s--minecraft.github.io.git master
+- '[ "$TRAVIS_PULL_REQUEST" == "false" ] && git push git@github.com:S--Minecraft/s--minecraft.github.io.git master'
