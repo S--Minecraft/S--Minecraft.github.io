@@ -6,17 +6,17 @@
     "coffee-script": "1.9.x",
     "del": "*",
     "gulp": "3.9.x",
-    "coffee-script": "1.9.x",
     "gulp-notify": "*",
     "gulp-plumber": "*",
     "gulp-changed": "*",
     "gulp-coffee": "*",
     "gulp-sass": "*",
     "gulp-haml": "*",
-    "gulp-htmlmin": "*",
+    "main-bower-files": "*",
     "gulp-uglify": "*",
+    "gulp-htmlmin": "*",
     "gulp-cssnano": "*",
     "gulp-inline-source": "*",
-    "main-bower-files": "*"
+    "gulp-replace": "*"
   }
 }
