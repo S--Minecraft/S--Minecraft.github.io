@@ -1,4 +1,6 @@
 language: node_js
+node_js:
+- "0.12"
 sudo: false
 cache:
   directories:
@@ -24,7 +26,7 @@ install:
 before_script:
 - npm install
 - bower install
-- git clone -b master git@github.com:S--Minecraft/s--minecraft.github.io release
+- git clone -b master https://github.com/S--Minecraft/s--minecraft.github.io release
 - pushd release
 - git checkout master
 - popd
@@ -35,7 +37,9 @@ after_success:
 - openssl aes-256-cbc -k "$SERVER_KEY" -in .travis/travis_key.enc -d -a -out travis.key
 - cp travis.key ~/.ssh/
 - chmod 600 ~/.ssh/travis.key
+- ssh-add travis.key
+- ssh -T git@github.com
 - cd release
 - git add --all
 - git commit -m "[Travis CI] $TRAVIS_COMMIT"
-- git push git@github.com:S--Minecraft/s--minecraft.github.io master
+- git push https://github.com/S--Minecraft/s--minecraft.github.io master
