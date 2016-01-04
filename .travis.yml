@@ -42,4 +42,4 @@ after_success:
 - cd release
 - git add --all
 - git commit -m "[Travis CI] $TRAVIS_COMMIT"
-- git push https://github.com/S--Minecraft/s--minecraft.github.io master
+- git push git@github.com:S--Minecraft/s--minecraft.github.io.git master
