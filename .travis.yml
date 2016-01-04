@@ -24,7 +24,7 @@ install:
 before_script:
 - npm install
 - bower install
-- git clone -b master git@github.com:S--Minecraft/s--minecraft.github.io.git release
+- git clone -b master git@github.com:S--Minecraft/s--minecraft.github.io release
 - pushd release
 - git checkout master
 - popd
@@ -34,8 +34,8 @@ after_success:
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/travis.key\n" >> ~/.ssh/config
 - openssl aes-256-cbc -k "$SERVER_KEY" -in .travis/travis_key.enc -d -a -out travis.key
 - cp travis.key ~/.ssh/
-- chmod 600 ~/.ssh/deploy
+- chmod 600 ~/.ssh/travis.key
 - cd release
 - git add --all
 - git commit -m "[Travis CI] $TRAVIS_COMMIT"
-- git push git@github.com:S--Minecraft/s--minecraft.github.io.git master
+- git push git@github.com:S--Minecraft/s--minecraft.github.io master
