@@ -2,6 +2,9 @@ body:not(#top-page) {
   main {
     overflow: visible;
   }
+  .mdl-layout {
+    height: auto;
+  }
 }
 
 footer, .mdl-mini-footer {
