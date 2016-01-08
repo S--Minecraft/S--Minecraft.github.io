@@ -4,6 +4,7 @@ body:not(#top-page) {
   }
   .mdl-layout {
     height: auto;
+    min-height: 100%;
   }
 }
 
