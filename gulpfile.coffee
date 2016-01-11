@@ -91,6 +91,7 @@ gulp.task "hugo-set", ["haml"], ->
     .pipe(replace("|~~", "{{"))
     .pipe(replace("~~|", "}}"))
     .pipe(replace("~~", '"'))
+    .pipe(inlineSource())
     .pipe(changed("./hugo/layouts"))
     .pipe(gulp.dest("./hugo/layouts"))
 
