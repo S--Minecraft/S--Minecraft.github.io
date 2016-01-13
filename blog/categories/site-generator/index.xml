@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>S--Minecraft.github.io</title>
-    <link>https://s--minecraft.github.io/blog/</link>
-    <description>Recent content on S--Minecraft.github.io</description>
+    <title>Site Generator on S--Minecraft.github.io</title>
+    <link>https://s--minecraft.github.io/blog/categories/site-generator/</link>
+    <description>Recent content in Site Generator on S--Minecraft.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>(C) 2015 S__Minecraft</copyright>
     <lastBuildDate>Wed, 13 Jan 2016 20:10:48 +0900</lastBuildDate>
-    <atom:link href="https://s--minecraft.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://s--minecraft.github.io/blog/categories/site-generator/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>HugoのShortcodeを書いた</title>
@@ -135,24 +135,6 @@
 
 &lt;p&gt;すごい重い記事になりそう…
 js入りまくってるだろうし…&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>あけおめ</title>
-      <link>https://s--minecraft.github.io/blog/other/2016/</link>
-      <pubDate>Fri, 01 Jan 2016 01:24:40 +0900</pubDate>
-      
-      <guid>https://s--minecraft.github.io/blog/other/2016/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;あけましておめでとうございます&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;2015年中にHugoの導入を完了したいといいながら、&lt;/p&gt;
-
-&lt;p&gt;2016年になってしまっていました…&lt;/p&gt;
-
-&lt;p&gt;まぁ、Hugoにテンプレート機能あるのにhtmlで書くのを嫌がってhamlで書くみたいな変なことをしてたりするせいでしょうが…ｗ&lt;/p&gt;
-
-&lt;p&gt;2015年、いろいろありましたが、今年もよろしくお願いします！&lt;/p&gt;
 </description>
     </item>
     
