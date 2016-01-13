@@ -11,3 +11,5 @@ author:
 paginate: 15
 params:
   hpurl: "https://s--minecraft.github.io/"
+pygmentscodefences: true
+pygmentsstyle: "monokai"
