@@ -9,6 +9,8 @@ cache:
   - "$HOME/gopath"
   - "$HOME/.nvm"
   - "$HOME/.cache/pip"
+before_cache:
+  - rm -f $HOME/.cache/pip/log/debug.log
 branches:
   only:
   - source
