@@ -23,7 +23,7 @@ env:
   - secure: L7awusiT3hVcb660hJplgkDn0UfJD/5ptU8idRjKb4tcsZSkwI8mrQwBR3ABlm/Lsqr212RyWKboQb0n2TZhMUHW0fhmlBClHw9CbTof7YMUwt7Dt65P//enj9Znzeg77k4TuxBuXm+apk+9P7iGsASUEsvF3xUqWXvlDXkk7qdgO+jSpnG8Vyx1NRpYvPlQU+P+nrNEW/PaWtDCR51gRK57zgARzXQIyAUY9dqnHrRAv91MpVsd8Un8AryUrBjiM7QGaIO6rgdz1+NxFe64L9LrRIaoERNt7LSDwkqrCGkBe346aUUH8MZ0MrH4syGe7PPINA3XUisRSUv2gG6RjQMTxBd3UlnkXwP2KhsL5mCahM/BR/4TMor06o+k//lYxXsVTrNZU43i/6C0oO097wNZhxZBXUpo3Bj76SadpaU8q1WoJRk8tGD+07aWjcPLnJHJnFS/9wPR97B5PkwzHFu+anD3girqUA6i8Hh9B7BVE1GShTGr5zo9nWA27h2Wt0zRywMXYrqGhbwKo54trA+kywm4UB0AHooadkqWIhSgidnff6A2G5ZaB4G2RyO+bGUb48AfXLKLcKSS2EenaWf0Fi2l951ROwvNA7QhJ2YXcTaWSd/vgp1wddaJSIrh0bQTcnSzRGsKfYBwJzcW72Kjh8sQ5T8UKCuNen+v+CE=
 install:
   - go get -v github.com/spf13/hugo
-  - pip install Pygments --user $HOME/pip
+  - pip install Pygments --user
 before_script:
 - echo "Version"
 - go version
