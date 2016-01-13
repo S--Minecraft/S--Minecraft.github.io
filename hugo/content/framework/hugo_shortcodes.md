@@ -44,7 +44,7 @@ title: "HugoのShortcodeを書いた"
 ### レポジトリ
 {{% github "S--Minecraft" "ShortQuery.js" %}}
 ~~~haml
-.github-card{"data-user": "|~~ .Get 0 ~~|", "data-repo": "|~~ .Get 1 ~~|", "data-width": 300, "data-theme": "medium", "data-target": "blank"}
+.github-card{"data-user": "|~~ .Get 0 ~~|", "data-repo": "|~~ .Get 1 ~~|", "data-width": 300, "data-height": 200, "data-theme": "medium", "data-target": "blank"}
 %script{src: "//cdn.jsdelivr.net/github-cards/latest/widget.js"}
 ~~~
 使い方
@@ -54,7 +54,7 @@ title: "HugoのShortcodeを書いた"
 ### ユーザー
 {{% githubuser "S--Minecraft" %}}
 ~~~haml
-.github-card{"data-user": "|~~ .Get 0 ~~|", "data-width": 300, "data-theme": "medium", "data-target": "blank"}
+.github-card{"data-user": "|~~ .Get 0 ~~|", "data-width": 300, "data-height": 200, "data-theme": "medium", "data-target": "blank"}
 %script{src: "//cdn.jsdelivr.net/github-cards/latest/widget.js"}
 ~~~
 使い方
@@ -90,3 +90,7 @@ Hugoに組み込まれているものを…
 ## ぼそっ
 すごい重い記事になりそう…
 js入りまくってるだろうし…
+
+追記
+ニコ動関連がhttpsで破壊されてる…
+誰か対処法あったら教えてほしいです
