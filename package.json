@@ -1,6 +1,12 @@
 {
   "name": "hp",
+  "description": "",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/S--Minecraft/s--minecraft.github.io.git"
+  },
+  "license": "CC-BY-NC-ND-4.0",
   "devDependencies": {
     "bower": "*",
     "coffee-script": "1.9.x",
