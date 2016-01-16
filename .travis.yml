@@ -11,6 +11,7 @@ cache:
   - "$HOME/.cache/pip"
 before_cache:
   - rm -f $HOME/.cache/pip/log/debug.log
+  - rm -rf $HOME/.cache/pip/http
 branches:
   only:
   - source
