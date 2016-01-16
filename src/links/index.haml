@@ -65,8 +65,8 @@
                   %h3= link.title
                 .mdl-card__supporting-text
                   %p= link.desc
-                .twiicon.mdl-shadow--2dp
-                  %img{src: "http://www.paper-glasses.com/api/twipi/" + link.twitter + "/bigger"}
+                .twiicon.text-center
+                  .twiiconImg.loading.mdl-spinner.mdl-spinner--single-color.mdl-js-spinner.is-active{sn: link.twitter}
                   %p
                     %a{href: "https://twitter.com/" + link.twitter}= "@" + link.twitter
                 .mdl-card__actions.mdl-card--border
@@ -87,3 +87,5 @@
           %p (C) 2015-2016 S__Minecraft
     
     %script{type: "text/javascript", src: "../lib/material.min.js"}
+    %script{type: "text/javascript", src: "../lib/shortQuery.min.js"}
+    %script{type: "text/javascript", src: "../js/links.js"}
