@@ -29,7 +29,6 @@ install:
 before_script:
 - echo "Version"
 - go version
-- node -v
 - hugo version
 - echo "-------"
 - npm install
