@@ -86,7 +86,7 @@ gulp.task "lib-copy", ->
     .pipe(gulp.dest("./bin/lib"))
 
 gulp.task "cname", ->
-  return gulp.src "./src/cname"
+  return gulp.src "./src/CNAME"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin"))
     .pipe(gulp.dest("./bin"))
@@ -152,7 +152,7 @@ gulp.task "r-lib", ["lib"], ->
     .pipe(gulp.dest("./release/lib"))
 
 gulp.task "r-cname", ["cname"], ->
-  return gulp.src "./bin/cname"
+  return gulp.src "./bin/CNAME"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./release"))
     .pipe(gulp.dest("./release"))
