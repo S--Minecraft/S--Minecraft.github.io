@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ニコ動 on S--Minecraft.github.io</title>
-    <link>https://s.4na.xyz/blog/tags/%E3%83%8B%E3%82%B3%E5%8B%95/</link>
+    <link>//s.4na.xyz/blog/tags/%E3%83%8B%E3%82%B3%E5%8B%95/</link>
     <description>Recent content in ニコ動 on S--Minecraft.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>(C) 2015 S__Minecraft</copyright>
     <lastBuildDate>Wed, 13 Jan 2016 20:10:48 +0900</lastBuildDate>
-    <atom:link href="https://s.4na.xyz/blog/tags/%E3%83%8B%E3%82%B3%E5%8B%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//s.4na.xyz/blog/tags/%E3%83%8B%E3%82%B3%E5%8B%95/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>HugoのShortcodeを書いた</title>
-      <link>https://s.4na.xyz/blog/framework/hugo_shortcodes/</link>
+      <link>//s.4na.xyz/blog/framework/hugo_shortcodes/</link>
       <pubDate>Wed, 13 Jan 2016 20:10:48 +0900</pubDate>
       
-      <guid>https://s.4na.xyz/blog/framework/hugo_shortcodes/</guid>
+      <guid>//s.4na.xyz/blog/framework/hugo_shortcodes/</guid>
       <description>
 
 &lt;p&gt;いろんなやつ書いてみました&lt;/p&gt;

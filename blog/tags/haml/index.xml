@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Haml on S--Minecraft.github.io</title>
-    <link>https://s.4na.xyz/blog/tags/haml/</link>
+    <link>//s.4na.xyz/blog/tags/haml/</link>
     <description>Recent content in Haml on S--Minecraft.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>(C) 2015 S__Minecraft</copyright>
     <lastBuildDate>Wed, 13 Jan 2016 20:10:48 +0900</lastBuildDate>
-    <atom:link href="https://s.4na.xyz/blog/tags/haml/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//s.4na.xyz/blog/tags/haml/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>HugoのShortcodeを書いた</title>
-      <link>https://s.4na.xyz/blog/framework/hugo_shortcodes/</link>
+      <link>//s.4na.xyz/blog/framework/hugo_shortcodes/</link>
       <pubDate>Wed, 13 Jan 2016 20:10:48 +0900</pubDate>
       
-      <guid>https://s.4na.xyz/blog/framework/hugo_shortcodes/</guid>
+      <guid>//s.4na.xyz/blog/framework/hugo_shortcodes/</guid>
       <description>
 
 &lt;p&gt;いろんなやつ書いてみました&lt;/p&gt;
@@ -144,10 +144,10 @@ js入りまくってるだろうし…&lt;/p&gt;
     
     <item>
       <title>あけおめ</title>
-      <link>https://s.4na.xyz/blog/other/2016/</link>
+      <link>//s.4na.xyz/blog/other/2016/</link>
       <pubDate>Fri, 01 Jan 2016 01:24:40 +0900</pubDate>
       
-      <guid>https://s.4na.xyz/blog/other/2016/</guid>
+      <guid>//s.4na.xyz/blog/other/2016/</guid>
       <description>&lt;p&gt;&lt;strong&gt;あけましておめでとうございます&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;2015年中にHugoの導入を完了したいといいながら、&lt;/p&gt;

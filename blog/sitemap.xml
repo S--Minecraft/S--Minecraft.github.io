@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://s.4na.xyz/blog/</loc>
+    <loc>//s.4na.xyz/blog/</loc>
     <lastmod>2016-01-13T20:10:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://s.4na.xyz/blog/framework/hugo_shortcodes/</loc>
+    <loc>//s.4na.xyz/blog/framework/hugo_shortcodes/</loc>
     <lastmod>2016-01-13T20:10:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s.4na.xyz/blog/other/2016/</loc>
+    <loc>//s.4na.xyz/blog/other/2016/</loc>
     <lastmod>2016-01-01T01:24:40+09:00</lastmod>
   </url>
   
