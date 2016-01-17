@@ -11,7 +11,9 @@ setupTabBarEvent = ->
           dom.removeClass("hidden")
           return
         )
+        return
       )
+    return
   )
   $$.I("All").on("click", ->
     $$.each($$.I("works-panels").children, (child) ->
