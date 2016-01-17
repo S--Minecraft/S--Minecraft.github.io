@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Site Generator on S--Minecraft.github.io</title>
-    <link>https://s--minecraft.github.io/blog/categories/site-generator/</link>
+    <link>https://s.4na.xyz/blog/categories/site-generator/</link>
     <description>Recent content in Site Generator on S--Minecraft.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>(C) 2015 S__Minecraft</copyright>
     <lastBuildDate>Wed, 13 Jan 2016 20:10:48 +0900</lastBuildDate>
-    <atom:link href="https://s--minecraft.github.io/blog/categories/site-generator/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://s.4na.xyz/blog/categories/site-generator/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>HugoのShortcodeを書いた</title>
-      <link>https://s--minecraft.github.io/blog/framework/hugo_shortcodes/</link>
+      <link>https://s.4na.xyz/blog/framework/hugo_shortcodes/</link>
       <pubDate>Wed, 13 Jan 2016 20:10:48 +0900</pubDate>
       
-      <guid>https://s--minecraft.github.io/blog/framework/hugo_shortcodes/</guid>
+      <guid>https://s.4na.xyz/blog/framework/hugo_shortcodes/</guid>
       <description>
 
 &lt;p&gt;いろんなやつ書いてみました&lt;/p&gt;
