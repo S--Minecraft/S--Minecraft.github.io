@@ -1,4 +1,4 @@
-baseurl: "https://s--minecraft.github.io/blog/"
+baseurl: "https://s.4na.xyz/blog/"
 title: "S--Minecraft.github.io"
 languageCode: "jp"
 copyright: "(C) 2015 S__Minecraft"
@@ -10,6 +10,6 @@ author:
   name: "S__Minecraft"
 paginate: 15
 params:
-  hpurl: "https://s--minecraft.github.io/"
+  hpurl: "https://s.4na.xyz/"
 pygmentscodefences: true
 pygmentsstyle: "monokai"
