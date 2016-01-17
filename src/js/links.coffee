@@ -8,18 +8,18 @@ insertImg = (DOM, xhr) ->
     DOM.parentNode.removeChild(DOM)
     return
 
-document.addEventListener("DOMContentLoaded", ->
-  for DOM in document.getElementsByClassName("twiiconImg")
-    sn = DOM.getAttribute("sn")
+document.on("DOMContentLoaded", ->
+  for DOM in $$.C("twiiconImg")
+    sn = DOM.getAttr("sn")
     xhr = new XMLHttpRequest()
     xhr.open("GET", gas+sn)
     if xhr.timeout?
-      xhr.addEventListener("timeout", (e) ->
+      xhr.on("timeout", (e) ->
         console.error "XHR Timeout: Twitter Icon getting"
         return
       )
       xhr.timeout = 5000
-    xhr.addEventListener("load", insertImg(DOM, xhr))
+    xhr.on("load", insertImg(DOM, xhr))
     xhr.send()
   return
 )
