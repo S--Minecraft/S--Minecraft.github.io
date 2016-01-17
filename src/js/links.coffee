@@ -1,7 +1,7 @@
 gas = "https://script.google.com/macros/s/AKfycbzLI3UBsmd-3OS9_LmiM6DQVXFTP2axRtVwGlinr5ctHBj_NS4/exec?sn="
 
 document.on("DOMContentLoaded", ->
-  $$.each($$.C("twiiconImg"), (DOM) ->
+  for DOM in $$.C("twiiconImg")
     sn = DOM.getAttr("sn")
     xhr = new XMLHttpRequest()
     xhr.open("GET", gas+sn)
@@ -20,6 +20,5 @@ document.on("DOMContentLoaded", ->
     )
     xhr.send()
     return
-  )
   return
 )
