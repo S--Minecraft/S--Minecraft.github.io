@@ -15,12 +15,12 @@ inlineSource = require "gulp-inline-source"
 replace = require "gulp-replace"
 transform = require "./gulp-transform.coffee"
 
-tasks = ["coffee", "haml", "scss", "icons", "img", "lib"]
+tasks = ["coffee", "haml", "scss", "icons", "img", "lib", "cname"]
 gulp.task "default", tasks
 
 gulp.task "hugo", ["hugo-run"]
 
-rtasks = ["js-min", "html-min", "css-min", "r-icons", "r-img", "r-lib"]
+rtasks = ["js-min", "html-min", "css-min", "r-icons", "r-img", "r-lib", "r-cname"]
 gulp.task "release", rtasks
 
 gulp.task "clean", (cb) ->
@@ -85,6 +85,12 @@ gulp.task "lib-copy", ->
     .pipe(changed("./bin/lib"))
     .pipe(gulp.dest("./bin/lib"))
 
+gulp.task "cname", ->
+  return gulp.src "./src/cname"
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(changed("./bin"))
+    .pipe(gulp.dest("./bin"))
+
 gulp.task "hugo-set", ["haml"], ->
   return gulp.src "./bin/blog/**"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
@@ -144,3 +150,9 @@ gulp.task "r-lib", ["lib"], ->
   return gulp.src "./bin/lib/**"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(gulp.dest("./release/lib"))
+
+gulp.task "r-cname", ["cname"], ->
+  return gulp.src "./bin/cname"
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    .pipe(changed("./release"))
+    .pipe(gulp.dest("./release"))
