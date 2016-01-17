@@ -1,7 +1,7 @@
 baseurl: "//s.4na.xyz/blog/"
-title: "S--Minecraft.github.io"
+title: "s.4na.xyz"
 languageCode: "jp"
-copyright: "(C) 2015 S__Minecraft"
+copyright: "(C) 2015-2016 S__Minecraft"
 MetaDataFormat: "yaml"
 taxonomies:
   tag: "tags"
