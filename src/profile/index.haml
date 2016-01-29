@@ -170,7 +170,7 @@
                 %h2.h4.mdl-card__title-text GitHub
               .mdl-card__supporting-text
                 .github-card{"data-user": "S--Minecraft", "data-theme": "medium"}
-                %script{src: "//cdn.jsdelivr.net/github-cards/latest/widget.js", async: true}
+                %script{src: "//cdn.jsdelivr.net/github-cards/latest/widget.js", defer: true, async: true}
       -# Footer
       %footer.mdl-mini-footer
         .mdl-mini-footer__left-section
@@ -185,6 +185,6 @@
             %a{href: "https://github.com/S--Minecraft/ShortQuery.js/"} ShortQuery.js
           %p (C) 2015-2016 S__Minecraft
     
-    %script{type: "text/javascript", src: "../lib/material.min.js"}
-    %script{type: "text/javascript", src: "../lib/shortQuery.min.js"}
-    %script{type: "text/javascript", src: "../js/profile.js"}
+    %script{type: "text/javascript", src: "../lib/material.min.js", defer: true, async: true}
+    %script{type: "text/javascript", src: "../lib/shortQuery.min.js", defer: true}
+    %script{type: "text/javascript", src: "../js/profile.js", defer: true}
