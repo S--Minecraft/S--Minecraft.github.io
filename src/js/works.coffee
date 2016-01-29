@@ -26,6 +26,5 @@ setupTabBarEvent = ->
 
 document.on("DOMContentLoaded", ->
   setupTabBarEvent()
-  componentHandler.upgradeDom()
   return
 )
