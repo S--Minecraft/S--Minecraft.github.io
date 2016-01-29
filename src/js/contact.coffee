@@ -12,19 +12,19 @@ send = ->
     # 成功
     if 200<=xhr.status<400
       $form.reset()
-      $status.innerHTML = "<i class=\"material-icons\">done</i>Sent successfully"
+      $status.insertAdjacentHTML("afterbegin", "<i class=\"material-icons\">done</i>Sent successfully")
       $status.removeClass("error")
       $status.addClass("success")
       $button.rmvAttr("disabled")
     else
-      $status.innerHTML = "<i class=\"material-icons\">error</i>Errored requesting"
+      $status.insertAdjacentHTML("afterbegin", "<i class=\"material-icons\">error</i>Errored requesting")
       $status.removeClass("success")
       $status.addClass("error")
       $button.rmvAttr("disabled")
     return
   )
   xhr.on("timeout", ->
-    $status.innerHTML = "<i class=\"material-icons\">error</i>Errored requesting has been timeout"
+    $status.insertAdjacentHTML("afterbegin", "<i class=\"material-icons\">error</i>Errored requesting has been timedout")
     $status.removeClass("success")
     $status.addClass("error")
     $button.rmvAttr("disabled")
@@ -53,7 +53,7 @@ form = ->
       send()
     else
       $status = $$.I("status")
-      $status.innerHTML = "<i class=\"material-icons\">error</i>Errored sending"
+      $status.insertAdjacentHTML("afterbegin", "<i class=\"material-icons\">error</i>Errored sending")
       $status.removeClass("success")
       $status.addClass("error")
     return
