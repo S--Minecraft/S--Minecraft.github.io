@@ -59,7 +59,7 @@
 
 
 &lt;div data-user=&#34;S--Minecraft&#34; data-repo=&#34;ShortQuery.js&#34; data-width=&#34;300&#34; data-height=&#34;200&#34; data-theme=&#34;medium&#34; data-target=&#34;blank&#34; class=&#34;github-card&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//cdn.jsdelivr.net/github-cards/latest/widget.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdn.jsdelivr.net/github-cards/latest/widget.js&#34; defer=&#34;defer&#34; async=&#34;async&#34;&gt;&lt;/script&gt;
 &lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;.github-card&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-user&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;|~~ .Get 0 ~~|&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-repo&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;|~~ .Get 1 ~~|&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-width&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;300&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-height&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;200&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-theme&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;medium&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-target&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;blank&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color: #f92672&#34;&gt;%script&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -72,7 +72,7 @@
 
 
 &lt;div data-user=&#34;S--Minecraft&#34; data-width=&#34;300&#34; data-height=&#34;200&#34; data-theme=&#34;medium&#34; data-target=&#34;blank&#34; class=&#34;github-card&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//cdn.jsdelivr.net/github-cards/latest/widget.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdn.jsdelivr.net/github-cards/latest/widget.js&#34; defer=&#34;defer&#34; async=&#34;async&#34;&gt;&lt;/script&gt;
 &lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;.github-card&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-user&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;|~~ .Get 0 ~~|&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-width&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;300&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-height&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;200&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-theme&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;medium&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-target&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;blank&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color: #f92672&#34;&gt;%script&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -89,13 +89,13 @@
 
 &lt;h3 id=&#34;動画サムネイル:c1a9a041c6074916a741b6df82481148&#34;&gt;動画サムネイル&lt;/h3&gt;
 
-
-&lt;iframe width=&#34;312&#34; height=&#34;200&#34; src=&#34;http://ext.nicovideo.jp/thumb/sm9&#34; scrolling=&#34;no&#34; style=&#34;border:solid 1px #CCC&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;
+&lt;iframe width=&#34;312&#34; height=&#34;200&#34; src=&#34;http://ext.nicovideo.jp/thumb/sm9&#34; scrolling=&#34;no&#34; style=&#34;border:solid 1px #CCC&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;動画プレイヤー:c1a9a041c6074916a741b6df82481148&#34;&gt;動画プレイヤー&lt;/h3&gt;
 
 &lt;p&gt;   
-&lt;script type=&#34;text/javascript&#34; src=&#34;http://ext.nicovideo.jp/thumb_watch/sm9?w=490&amp;amp;amp;h=307&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://ext.nicovideo.jp/thumb_watch/sm9?w=490&amp;amp;amp;h=307&#34; defer=&#34;defer&#34; async=&#34;async&#34;&gt;&lt;/script&gt;
 &lt;noscript&gt;
 &lt;a href=&#34;http://www.nicovideo.jp/watch/sm9&#34;&gt;新・豪血寺一族 -煩悩解放 - レッツゴー！陰陽師&lt;/a&gt;&lt;/noscript&gt;&lt;/p&gt;
 
