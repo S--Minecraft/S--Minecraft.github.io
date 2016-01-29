@@ -1,16 +1,28 @@
+main.mdl-layout__content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+
+#content {
+  flex: 1 1 80%;
+  .h4 {
+    margin: 0;
+  }
+}
+
 footer, .mdl-mini-footer {
+  display: block;
+  flex: 0 1 60px;
   padding: 8px 16px;
   a {
     color: inherit;
   }
   p {
     margin: 0 0 5px;
-  }
-}
-
-#content {
-  .h4 {
-    margin: 0;
   }
 }
 
