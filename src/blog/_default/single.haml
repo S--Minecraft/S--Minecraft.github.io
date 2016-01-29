@@ -86,14 +86,15 @@
                   |~~ end ~~|
                 .content
                   |~~ .Content ~~|
-                %p.prev
-                  |~~ if .Prev ~~|
-                  %a{href: "|~~ .Prev.Permalink ~~|"} <-
-                  |~~ end ~~|
-                %p.next
-                  |~~ if .Next ~~|
-                  %a{href: "|~~ .Next.Permalink ~~|"} ->
-                  |~~ end ~~|
+                #prevnext
+                  %p.prev
+                    |~~ if .Prev ~~|
+                    %a{href: "|~~ .Prev.Permalink ~~|"} <-
+                    |~~ end ~~|
+                  %p.next
+                    |~~ if .Next ~~|
+                    %a{href: "|~~ .Next.Permalink ~~|"} ->
+                    |~~ end ~~|
         -# Footer
         %footer.mdl-mini-footer
           .mdl-mini-footer__left-section

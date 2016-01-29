@@ -70,16 +70,17 @@
                       %h2.h4.mdl-card__title-text= work.name
                     .mdl-card__supporting-text
                       %p!= work.desc
-                    #buttons.mdl-card__actions.mdl-card--border
-                      - if (work.dl)
-                        %a{href: work.dl}
-                          %button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect Download Page
-                      - if (work.github)
-                        %a{href: work.github}
-                          %button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect GitHub
-                    %ul
-                      - each t in work.tags
-                        %li.mdl-shadow--2dp= t
+                    .actions.mdl-card__actions.mdl-card--border
+                      .buttons
+                        - if (work.dl)
+                          %a{href: work.dl}
+                            %button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect Download Page
+                        - if (work.github)
+                          %a{href: work.github}
+                            %button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect GitHub
+                      %ul.tags
+                        - each t in work.tags
+                          %li.mdl-shadow--2dp= t
         -# Footer
         %footer.mdl-mini-footer
           .mdl-mini-footer__left-section

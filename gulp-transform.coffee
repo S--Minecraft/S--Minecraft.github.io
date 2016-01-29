@@ -26,7 +26,7 @@ makeAllTag = (obj) ->
 
 tagToString = (obj) ->
   for w in obj.works
-    w.tags = w.tags.sort().reverse()
+    w.tags = w.tags.sort()
     w.tagsStr = w.tags.join(" ")
   return obj
 
