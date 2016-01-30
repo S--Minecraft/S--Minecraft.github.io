@@ -24,15 +24,14 @@ main.mdl-layout__content {
 }
 
 #content {
-  @include flex(1 1 80%);
+  @include flex(1 0 auto);
   .h4 {
     margin: 0;
   }
 }
 
 footer, .mdl-mini-footer {
-  display: block;
-  @include flex(0 1 60px);
+  @include flex(0 1 auto);
   padding: 8px 16px;
   a {
     color: inherit;
