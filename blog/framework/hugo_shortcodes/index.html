@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="x-dns-prefetch-control" content="on"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<title>HugoのShortcodeを書いた - Blog | S--Minecraft</title>
+<meta name="description" content="S__Minecraftのポートフォリオです"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@S__Minecraft"/>
+<meta name="twitter:image" content="//s.4na.xyz/img/favicon.png"/>
+<meta name="msapplication-TileImage" content="//s.4na.xyz/img/favicon.png"/>
+<meta name="msapplication-TileColor" content="rgb(97, 56, 175)"/>
+<meta property="og:title" content="HugoのShortcodeを書いた"/>
+<meta property="og:site_name" content="S--Minecraft"/>
+<meta property="og:description" content="Portfolio of S__Minecraft"/>
+<meta property="og:locale" content="ja_JP"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="//s.4na.xyz/blog/framework/hugo_shortcodes/"/>
+<meta property="og:image" content="http//s.4na.xyz/img/favicon3.png"/>
+<meta property="og:image:secure_url" content="https//s.4na.xyz/img/favicon3.png"/>
+<script>!function(e,a,t,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=a.createElement(t),s=a.getElementsByTagName(t)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-54091243-2","auto"),ga("send","pageview");</script>
+<link rel="dns-prefetch preconnect" href="//fonts.googleapis.com/"/>
+<link rel="stylesheet" href="//s.4na.xyz/lib/material.min.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<link rel="icon shortcut mask-icon" sizes="16x16 32x32 48x48 128x128 256x256" href="//s.4na.xyz/img/favicon.ico"/>
+<link rel="apple-touch-icon fluid-icon" href="//s.4na.xyz/img/favicon.png"/>
+<link rel="stylesheet" href="//s.4na.xyz/css/core.css"/></head>
+<body id="blog-content-page">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<header class="mdl-layout__header">
+<div class="mdl-layout__header-row">
+<span class="mdl-layout-title">S--Minecraft</span>
+<div class="mdl-layout-spacer"></div>
+<nav class="mdl-navigation mdl-layout--large-screen-only">
+<a href="//s.4na.xyz/profile/" class="mdl-navigation__link">Profile</a>
+<a href="//s.4na.xyz/works/" class="mdl-navigation__link">Works</a>
+<a href="//s.4na.xyz/blog/" class="mdl-navigation__link">Blog</a>
+<a href="//s.4na.xyz/contact/" class="mdl-navigation__link">Contact</a>
+<a href="//s.4na.xyz/links/" class="mdl-navigation__link">Links</a></nav></div></header>
+<div class="mdl-layout__drawer">
+<span class="mdl-layout-title">S--Minecraft</span>
+<nav class="mdl-navigation">
+<a href="//s.4na.xyz/" class="mdl-navigation__link">
+<i class="material-icons md-18">home</i>Top</a>
+<a href="//s.4na.xyz/profile/" class="mdl-navigation__link">
+<i class="material-icons md-18">face</i>Profile</a>
+<a href="//s.4na.xyz/works/" class="mdl-navigation__link">
+<i class="material-icons md-18">dashboard</i>Works</a>
+<a href="//s.4na.xyz/blog/" class="mdl-navigation__link">
+<i class="material-icons md-18">subject</i>Blog</a>
+<a href="//s.4na.xyz/contact/" class="mdl-navigation__link">
+<i class="material-icons md-18">question_answer</i>Contact</a>
+<a href="//s.4na.xyz/links/" class="mdl-navigation__link">
+<i class="material-icons md-18">call_split</i>Links</a></nav></div>
+<main class="mdl-layout__content">
+<div id="content">
+<div id="blog-singlepage-container">
+<div id="ribbon"></div>
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-iphone"></div>
+<article class="mdl-color--white mdl-shadow--4dp mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+<h1 class="text-center">HugoのShortcodeを書いた</h1>
+<p class="time">
+<time datetime="2016-01-13">2016-01-13</time></p>
+<div id="data">
+<div class="section">
+<i class="material-icons">folder</i>
+<a href="//s.4na.xyz/blog/framework">framework</a></div> 
+<div class="categories">
+<i class="material-icons">class</i>
+<a href="//s.4na.xyz/blog/categories/site%20generator">site generator</a></div> 
+<div class="tags">
+<i class="material-icons">label</i>
+<a href="//s.4na.xyz/blog/tags/hugo">hugo</a>
+<a href="//s.4na.xyz/blog/tags/shortcode">shortcode</a>
+<a href="//s.4na.xyz/blog/tags/%e3%83%8b%e3%82%b3%e5%8b%95">ニコ動</a>
+<a href="//s.4na.xyz/blog/tags/haml">haml</a></div></div>
+<div class="content">
+
+<p>いろんなやつ書いてみました</p>
+
+<p>コードはhaml+独自構文で書いてありますが、<br />
+独自構文といっても</p>
+
+<p><code>|~~ ~~|</code> は <code>{{ }}</code><br />
+<code>|~~ ~~|</code>内の<code>~~ ~~</code> は <code>&quot; &quot;</code><br />
+ってことくらいです<br />
+おそらくそんなに意識せずに読めるはず…</p>
+
+<p>すべての使い方は<code>{{ }}</code>が全角になってます</p>
+
+<h2 id="全般:c1a9a041c6074916a741b6df82481148">全般</h2>
+
+<h3 id="ファビコン付きリンク:c1a9a041c6074916a741b6df82481148">ファビコン付きリンク</h3>
+
+ 
+<a href="http://www.google.co.jp">
+<img src="http://favicon.hatena.ne.jp/?url=http%3a%2f%2fwww.google.co.jp" style="text-align:left;margin:0 5px 0 5px"/>Google</a>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%">|~~ $url := .Get 0 ~~|
+|~~ $title := .Get 1 ~~|
+<span style="color: #f92672">%a</span><span style="color: #f8f8f2">{</span><span style="color: #e6db74">href</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;|~~ $url ~~|&quot;</span><span style="color: #f8f8f2">}</span>
+  <span style="color: #f92672">%img</span><span style="color: #f8f8f2">{</span><span style="color: #e6db74">src</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;http://favicon.hatena.ne.jp/?url=|~~ $url ~~|&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">style</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;float:left;margin:5px 5px 0px 5px&quot;</span><span style="color: #f8f8f2">}</span>
+  |~~ $title ~~|
+</pre></div>
+
+<p>使い方</p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%">｛｛% link &quot;リンク先&quot; &quot;表示文字列&quot; %｝｝
+</pre></div>
+
+<h2 id="github:c1a9a041c6074916a741b6df82481148">GitHub</h2>
+
+<p> 
+<a href="https://github.com/lepture/github-cards">
+<img src="http://favicon.hatena.ne.jp/?url=https%3a%2f%2fgithub.com%2flepture%2fgithub-cards" style="text-align:left;margin:0 5px 0 5px"/>GitHub Cards</a> を利用しているので<br />
+<code>data-～</code>の属性をいじくったらいろいろ変えれます</p>
+
+<h3 id="レポジトリ:c1a9a041c6074916a741b6df82481148">レポジトリ</h3>
+
+
+<div data-user="S--Minecraft" data-repo="ShortQuery.js" data-width="300" data-height="200" data-theme="medium" data-target="blank" class="github-card"></div>
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js" defer="defer" async="async"></script>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #a6e22e">.github-card</span><span style="color: #f8f8f2">{</span><span style="color: #e6db74">&quot;data-user&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;|~~ .Get 0 ~~|&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;data-repo&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;|~~ .Get 1 ~~|&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;data-width&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">300</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;data-height&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">200</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;data-theme&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;medium&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;data-target&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;blank&quot;</span><span style="color: #f8f8f2">}</span>
+<span style="color: #f92672">%script</span><span style="color: #f8f8f2">{</span><span style="color: #e6db74">src</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;</span><span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<p>使い方</p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%">｛｛% github &quot;S--Minecraft&quot; &quot;ShortQuery.js&quot; %｝｝
+</pre></div>
+
+<h3 id="ユーザー:c1a9a041c6074916a741b6df82481148">ユーザー</h3>
+
+
+<div data-user="S--Minecraft" data-width="300" data-height="200" data-theme="medium" data-target="blank" class="github-card"></div>
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js" defer="defer" async="async"></script>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #a6e22e">.github-card</span><span style="color: #f8f8f2">{</span><span style="color: #e6db74">&quot;data-user&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;|~~ .Get 0 ~~|&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;data-width&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">300</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;data-height&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">200</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;data-theme&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;medium&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;data-target&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;blank&quot;</span><span style="color: #f8f8f2">}</span>
+<span style="color: #f92672">%script</span><span style="color: #f8f8f2">{</span><span style="color: #e6db74">src</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;</span><span style="color: #f8f8f2">}</span>
+</pre></div>
+
+<p>使い方</p>
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%">｛｛% githubuser &quot;ユーザー名&quot; %｝｝
+</pre></div>
+
+<h2 id="ニコ動関連:c1a9a041c6074916a741b6df82481148">ニコ動関連</h2>
+
+<p> 
+<a href="http://qiita.com/kounoike/items/cdbfaa2dab9bd3393a84">
+<img src="http://favicon.hatena.ne.jp/?url=http%3a%2f%2fqiita.com%2fkounoike%2fitems%2fcdbfaa2dab9bd3393a84" style="text-align:left;margin:0 5px 0 5px"/>Hugoのshortcodesでnicovideoの埋め込みを簡単にする</a> からのコピペなのでそちらを…</p>
+
+<h3 id="動画サムネイル:c1a9a041c6074916a741b6df82481148">動画サムネイル</h3>
+
+<p>
+<iframe width="312" height="200" src="http://ext.nicovideo.jp/thumb/sm9" scrolling="no" style="border:solid 1px #CCC"></iframe></p>
+
+<h3 id="動画プレイヤー:c1a9a041c6074916a741b6df82481148">動画プレイヤー</h3>
+
+<p>   
+<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/sm9?w=490&amp;amp;h=307" defer="defer" async="async"></script>
+<noscript>
+<a href="http://www.nicovideo.jp/watch/sm9">新・豪血寺一族 -煩悩解放 - レッツゴー！陰陽師</a></noscript></p>
+
+<h2 id="おまけ:c1a9a041c6074916a741b6df82481148">おまけ</h2>
+
+<p>Hugoに組み込まれているものを…
+コードは  
+<a href="https://gohugo.io/extras/shortcodes/">
+<img src="http://favicon.hatena.ne.jp/?url=https%3a%2f%2fgohugo.io%2fextras%2fshortcodes%2f" style="text-align:left;margin:0 5px 0 5px"/>こちら</a></p>
+
+<h3 id="twitter:c1a9a041c6074916a741b6df82481148">Twitter</h3>
+
+<p><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hugo 0.15 will have 30%+ faster render times thanks to this commit <a href="https://t.co/FfzhM8bNhT">https://t.co/FfzhM8bNhT</a>  <a href="https://twitter.com/hashtag/gohugo?src=hash">#gohugo</a> <a href="https://twitter.com/hashtag/golang?src=hash">#golang</a> <a href="https://t.co/ITbMNU2BUf">https://t.co/ITbMNU2BUf</a></p>&mdash; Steve Francia (@spf13) <a href="https://twitter.com/spf13/status/666616452582129664">November 17, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<h3 id="youtube:c1a9a041c6074916a741b6df82481148">Youtube</h3>
+
+<p>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/w7Ft2ymGmfc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
+</p>
+
+<h3 id="vimeo:c1a9a041c6074916a741b6df82481148">Vimeo</h3>
+
+<p>
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//player.vimeo.com/video/146022717" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+ </div>
+</p>
+
+<h3 id="githubのgist:c1a9a041c6074916a741b6df82481148">GitHubのgist</h3>
+
+<p><script src="//gist.github.com/spf13/7896402.js"></script></p>
+
+<h2 id="ぼそっ:c1a9a041c6074916a741b6df82481148">ぼそっ</h2>
+
+<p>すごい重い記事になりそう…
+js入りまくってるだろうし…</p>
+
+<p>追記
+ニコ動関連がhttpsで破壊されてる…
+誰か対処法あったら教えてほしいです</p>
+</div>
+<div id="prevnext">
+<p class="prev"></p>
+<p class="next">
+<a href="//s.4na.xyz/blog/other/2016/">-></a></p></div></article></div></div></div>
+<footer class="mdl-mini-footer">
+<div class="mdl-mini-footer__left-section">
+<p>Powered by
+<a href="http://gohugo.io/">Hugo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hosted by
+<a href="https://pages.github.com/">GitHub Pages</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using
+<a href="http://www.getmdl.io/">Material Design Lite</a> and
+<a href="https://github.com/S--Minecraft/ShortQuery.js/">ShortQuery.js</a></p>
+<p>(C) 2015-2016 S__Minecraft</p></div></footer></main></div>
+<script type="text/javascript" src="//s.4na.xyz/lib/material.min.js" defer="defer" async="async"></script></body></html>
