@@ -20,7 +20,7 @@
 
 main.mdl-layout__content {
   @include displayflex;
-  @include flex-flow(colum nowrap);
+  @include flex-flow(column nowrap);
 }
 
 #content {
