@@ -1,3 +1,53 @@
+@mixin displayflex() {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin flex-flow($val) {
+  -webkit-flex-flow: $val;
+  -ms-flex-flow: $val;
+  flex-flow: $val;
+}
+@mixin flex-direction($val) {
+  -webkit-box-direction: $val;
+  -ms-flex-direction: $val;
+  flex-direction: $val;
+}
+@mixin flex-vertical() {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@mixin flex-horizonal() {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+@mixin flex-wrap($val) {
+  -ms-flex-wrap: $val;
+  flex-wrap: $val;
+}
+@mixin flex-grow($val) {
+  -webkit-box-flex: $val;
+  -ms-flex-positive: $val;
+  flex-grow: $val;
+}
+@mixin flex-shrink($val) {
+  -ms-flex-negative: $val;
+  flex-shrink: $val;
+}
+@mixin align-self($val) {
+  -ms-flex-item-align: $val;
+  align-self: $val;
+}
+@mixin align-items($val) {
+  -webkit-box-align: $val;
+  -ms-flex-align: $val;
+  align-items: $val;
+}
+
 html, body {
   font-family: "Helvetica","Arial",sans-serif;
   font-size: 14px;
@@ -19,12 +69,8 @@ body {
   margin: 0;
   position: absolute;
   height: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  @include displayflex;
+  @include flex-vertical;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
@@ -32,22 +78,13 @@ body {
 }
 
 header {
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+  @include displayflex;
+  @include flex-horizonal;
+  @include flex-wrap(nowrap);
+  @include flex-shrink(0);
   box-sizing: border-box;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  @include align-self(stretch);
+  @include align-items(center);
   height: 64px;
   margin: 0;
   padding: 0 40px 0 60px;
@@ -61,8 +98,7 @@ header {
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-property: max-height,box-shadow;
   * {
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
+    @include flex-shrink(0);
   }
   .title {
     display: block;
@@ -75,27 +111,17 @@ header {
     box-sizing: border-box;
   }
   .spacer {
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
+    @include flex-shrink(0);
+    @include flex-grow(1);
   }
   nav {
     margin: 0;
     padding: 0;
     height: 64px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
+    @include flex-horizonal;
+    @include align-items(center);
+    @include displayflex;
+    @include flex-wrap(nowrap);
     box-sizing: border-box;
     a {
       display: block;
@@ -121,9 +147,7 @@ main {
   display: inline-block;
   overflow-y: auto;
   overflow-x: hidden;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  @include flex-grow(1);
   z-index: 1;
   -webkit-overflow-scrolling: touch;
   background: #eeeeee;
@@ -147,10 +171,8 @@ main {
 
 footer {
   padding: 8px 16px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
+  @include displayflex;
+  @include flex-flow(row wrap);
   -webkit-box-pack: justify;
   -ms-flex-pack: jusify;
   justify-content: space between;
