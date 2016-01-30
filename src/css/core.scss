@@ -8,6 +8,7 @@ main.mdl-layout__content {
 }
 
 #content {
+  -webkit-flex: 1 1 80%;
   flex: 1 1 80%;
   .h4 {
     margin: 0;
@@ -16,6 +17,7 @@ main.mdl-layout__content {
 
 footer, .mdl-mini-footer {
   display: block;
+  -webkit-flex: 0 1 60px;
   flex: 0 1 60px;
   padding: 8px 16px;
   a {
@@ -47,6 +49,7 @@ footer, .mdl-mini-footer {
       flex-flow: row wrap;
       justify-content: flex-end;
       .icon {
+        -webkit-flex: 0 1 30px;
         flex: 0 1 30px;
       }
     }
@@ -77,6 +80,7 @@ footer, .mdl-mini-footer {
       flex-flow: row wrap;
       padding-bottom: 0;
       .buttons {
+        -webkit-flex: 1.5 1;
         flex: 1.5 1;
         align-items: flex-start;
         display: -webkit-flex;
@@ -92,6 +96,7 @@ footer, .mdl-mini-footer {
         }
       }
       .tags {
+        -webkit-flex: 1 1;
         flex: 1 1;
         align-items: flex-end;
         justify-content: flex-end;
