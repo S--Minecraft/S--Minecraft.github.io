@@ -23,6 +23,7 @@
     "gulp-htmlmin": "*",
     "gulp-cssnano": "*",
     "gulp-inline-source": "*",
-    "gulp-replace": "*"
+    "gulp-replace": "*",
+    "gulp-rename": "*"
   }
 }

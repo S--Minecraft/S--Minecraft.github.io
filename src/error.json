@@ -1,0 +1,19 @@
+{
+  "errors": [
+    {
+      "name": "404",
+      "enDesc": "Page not found",
+      "jaDesc": "ここのページ？そんなのなかった"
+    },
+    {
+      "name": "500",
+      "enDesc": "Internal Server Error",
+      "jaDesc": "ごめん失敗しちゃった"
+    },
+    {
+      "name": "503",
+      "enDesc": "Service Unavailable",
+      "jaDesc": "待って…今はちょっときついから…"
+    }
+  ]
+}

@@ -13,6 +13,7 @@ htmlmin = require "gulp-htmlmin"
 cssnano = require "gulp-cssnano"
 inlineSource = require "gulp-inline-source"
 replace = require "gulp-replace"
+rename = require "gulp-rename"
 transform = require "./gulp-transform.coffee"
 
 tasks = ["coffee", "haml", "scss", "icons", "img", "lib", "cname"]
@@ -42,8 +43,8 @@ gulp.task "coffee", ->
     .pipe(coffee())
     .pipe(gulp.dest("./bin"))
 
-gulp.task "haml", ->
-  return gulp.src "./src/**/*.haml"
+gulp.task "haml", ["errorHaml"], ->
+  return gulp.src ["./src/**/*.haml", "!./src/error.haml"]
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./bin"))
     .pipe(haml({
@@ -53,6 +54,26 @@ gulp.task "haml", ->
       }
     }))
     .pipe(gulp.dest("./bin"))
+
+errorHamls = (obj) ->
+  return ->
+    return gulp.src "./src/error.haml"
+      .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+      .pipe(changed("./bin"))
+      .pipe(haml({
+        compiler: "visionmedia"
+        compilerOpts: {
+          locals: obj
+        }
+      }))
+      .pipe(rename(obj.name+".html"))
+      .pipe(gulp.dest("./bin"))
+errors = require("./src/error.json").errors
+error = []
+for e in errors
+  error.push("errorHaml#{e.name}")
+  gulp.task "errorHaml#{e.name}", errorHamls(e)
+gulp.task "errorHaml", error
 
 gulp.task "scss", ->
   return gulp.src "./src/**/*.scss"
