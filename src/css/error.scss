@@ -134,7 +134,7 @@ header {
       margin: 0;
       -webkit-tap-highlight-color: rgba(255,255,255,0);
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
       a {
         display: none;
       }
@@ -162,7 +162,7 @@ main {
   .spacer {
     margin: 10%;
   }
-  @media (min-width: 550px) {
+  @media (min-width: 1024px) {
     .mini {
       display: none;
     }
