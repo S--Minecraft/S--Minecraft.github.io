@@ -111,7 +111,24 @@
                     %a{href: "|~~ .Next.Permalink ~~|"} ->
                     |~~ end ~~|
                 #comment
-                  |~~ template ~~_internal/disqus.html~~ . ~~|
+                  #disqus_thread
+                  %script
+                    /*
+                    var disqus_config = function () {
+                      this.page.url = PAGE_URL;
+                      this.page.identifier = PAGE_IDENTIFIER;
+                    };
+                    */
+                    (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = '//s4naxyz.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', Date.now());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                  %noscript
+                    Please enable JavaScript to view the 
+                    %a{href: "https://disqus.com/?ref_noscript", rel: "nofollow"}
+                      comments powered by Disqus.
         -# Footer
         %footer.mdl-mini-footer
           .mdl-mini-footer__left-section
