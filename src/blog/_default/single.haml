@@ -101,13 +101,6 @@
                   |~~ end ~~|
                 .content
                   |~~ .Content ~~|
-                #comment
-                  #disqus_thread
-                  %script{src: "../../js/disqus.js", inline: true}
-                  %noscript
-                    Please enable JavaScript to view the 
-                    %a{href: "https://disqus.com/?ref_noscript", rel: "nofollow"}
-                      comments powered by Disqus.
                 #prevnext
                   %p.prev
                     |~~ if .Prev ~~|
@@ -117,6 +110,13 @@
                     |~~ if .Next ~~|
                     %a{href: "|~~ .Next.Permalink ~~|"} ->
                     |~~ end ~~|
+                #comment
+                  #disqus_thread
+                  %script{src: "../../js/disqus.js", inline: true}
+                  %noscript
+                    Please enable JavaScript to view the 
+                    %a{href: "https://disqus.com/?ref_noscript", rel: "nofollow"}
+                      comments powered by Disqus.
         -# Footer
         %footer.mdl-mini-footer
           .mdl-mini-footer__left-section
