@@ -1,15 +1,19 @@
 baseurl: "//s.4na.xyz/blog/"
 title: "s.4na.xyz"
 languageCode: "jp"
+author:
+  name: "S__Minecraft"
 copyright: "(C) 2015-2016 S__Minecraft"
 MetaDataFormat: "yaml"
+
 taxonomies:
   tag: "tags"
   category: "categories"
-author:
-  name: "S__Minecraft"
+
 paginate: 15
+
 params:
   hpurl: "//s.4na.xyz/"
+
 pygmentscodefences: true
 pygmentsstyle: "monokai"
