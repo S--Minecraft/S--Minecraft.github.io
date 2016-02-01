@@ -1,5 +1,6 @@
 ---
 title: ""
+disqus_title: ""
 tags:
  - ""
 categories:

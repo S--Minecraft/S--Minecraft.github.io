@@ -9,6 +9,7 @@ tags:
 - "ニコ動"
 - "haml"
 title: "HugoのShortcodeを書いた"
+disqus_title: "framework/hugo_shortcodes"
 ---
 いろんなやつ書いてみました  
   
