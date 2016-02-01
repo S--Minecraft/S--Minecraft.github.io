@@ -1,9 +1,64 @@
 {
   "errors": [
     {
+      "name": "400",
+      "enDesc": "Page not found",
+      "jaDesc": "ここのページ？そんなのなかった"
+    },
+    {
+      "name": "403",
+      "enDesc": "Forbidden",
+      "jaDesc": "ここのページにアクセスしちゃダメだよ"
+    },
+    {
       "name": "404",
       "enDesc": "Page not found",
       "jaDesc": "ここのページ？そんなのなかった"
+    },
+    {
+      "name": "406",
+      "enDesc": "Not Acceptable",
+      "jaDesc": "えっえっ…そんなこと言われても…"
+    },
+    {
+      "name": "408",
+      "enDesc": "Request Timeout",
+      "jaDesc": "ごめん…返信遅かったね…"
+    },
+    {
+      "name": "409",
+      "enDesc": "Conflict",
+      "jaDesc": "えっどういうことさっきと言ってること違うよ"
+    },
+    {
+      "name": "410",
+      "enDesc": "Gone",
+      "jaDesc": "ここのページなんてないよ？なくなったよ？"
+    },
+    {
+      "name": "411",
+      "enDesc": "Length Required",
+      "jaDesc": "どっから返せばいいの？"
+    },
+    {
+      "name": "412",
+      "enDesc": "Precondition Failed",
+      "jaDesc": "なんか最初の地点で変だよ"
+    },
+    {
+      "name": "417",
+      "enDesc": "Expectation Failed",
+      "jaDesc": "そんなの返答できないよ"
+    },
+    {
+      "name": "418",
+      "enDesc": "I'm a teapot",
+      "jaDesc": "コーヒーを淹れさせはしないよ"
+    },
+    {
+      "name": "451",
+      "enDesc": "Unavailable For Legal Reasons",
+      "jaDesc": "政府に止められちゃった…"
     },
     {
       "name": "500",
@@ -11,9 +66,19 @@
       "jaDesc": "ごめん失敗しちゃった"
     },
     {
+      "name": "502",
+      "enDesc": "Bad Gateway",
+      "jaDesc": "変なとこ通っちゃダメだよ"
+    },
+    {
       "name": "503",
       "enDesc": "Service Unavailable",
       "jaDesc": "待って…今はちょっときついから…"
+    },
+    {
+      "name": "504",
+      "enDesc": "Gateway Timeout",
+      "jaDesc": "道に迷っちゃった？"
     }
   ]
 }
