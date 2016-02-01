@@ -1,0 +1,1 @@
+(function(){var t,e,a;t=document,a=t.createElement("script"),a.src="//s4naxyz.disqus.com/embed.js",a.setAttribute("data-timestamp",Date.now()),(null!=(e=t.head)?e:t.body).appendChild(a)}).call(this);
