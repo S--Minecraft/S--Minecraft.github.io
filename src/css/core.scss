@@ -44,7 +44,8 @@ footer, .mdl-mini-footer {
 
 #top-page-container {
   box-sizing: border-box;
-  background: url("../img/top-background.png");
+  background-image: url("../img/top-background.png");
+  background-color: rgb(97,56,175);
   color: #FFFFFF;
   position: absolute;
   top: 0;
@@ -55,6 +56,9 @@ footer, .mdl-mini-footer {
   min-height:30%;
   h1 {
     overflow-wrap: break-word;
+  }
+  @media (max-width: 549px) {
+    background-image: url("../img/top-background-mobile.png");
   }
 }
 
