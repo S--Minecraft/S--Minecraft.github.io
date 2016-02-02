@@ -1,3 +1,5 @@
+- name = "Blog"
+
 !!!5
 %html{lang: "ja"}
   %head{prefix: "og: http://ogp.me/ns# website: http://ogp.me/ns/website#"}
@@ -6,24 +8,22 @@
     %meta{"http-equiv": "x-dns-prefetch-control", content: "on"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
     
-    %title Blog | S--Minecraft
-    %meta{name: "description", content: "S__Minecraftのポートフォリオです"}
+    %title= name + " | " + general.sitename
+    %meta{name: "description", content: general.desc}
     %meta{name: "twitter:card", content: "summary"}
-    %meta{name: "twitter:site", content: "@S__Minecraft"}
-    %meta{name: "twitter:image", content: "|~~ .Site.Params.hpurl ~~|img/favicon.png"}
-    %meta{name: "msapplication-TileImage", content: "|~~ .Site.Params.hpurl ~~|img/favicon.png"}
-    %meta{name: "msapplication-TileColor", content: "rgb(97, 56, 175)"}
-    %meta{name: "theme-color", content: "rgb(97, 56, 175)"}
-    %meta{property: "og:title", content: "Blog"}
-    %meta{property: "og:site_name", content: "S--Minecraft"}
-    %meta{property: "og:description", content: "Portfolio of S__Minecraft"}
+    %meta{name: "twitter:site", content: general.twitter}
+    %meta{name: "twitter:image", content: "https:"+general.baseurl+"img/favicon.png"}
+    %meta{name: "msapplication-TileImage", content: "../img/favicon.png"}
+    %meta{name: "msapplication-TileColor", content: general.color}
+    %meta{name: "theme-color", content: general.color}
+    %meta{property: "og:title", content: name}
+    %meta{property: "og:site_name", content: general.sitename}
+    %meta{property: "og:description", content: general.desc}
     %meta{property: "og:locale", content: "ja_JP"}
     %meta{property: "og:type", content: "website"}
-    %meta{property: "og:url", content: "|~~ .Site.Params.hpurl ~~|blog/"}
-    %meta{property: "og:image", content: "|~~ .Site.Params.hpurl ~~|img/favicon3.png"}
-    %meta{property: "og:image:secure_url", content: "|~~ .Site.Params.hpurl ~~|img/favicon3.png"}
-    
-    %script{src: "../lib/google.js", inline: true}
+    %meta{property: "og:url", content: "https:"+general.baseurl}
+    %meta{property: "og:image", content: "http:"+general.baseurl+"img/favicon3.png"}
+    %meta{property: "og:image:secure_url", content: "https:"+general.baseurl+"img/favicon3.png"}
     
     %link{rel: "dns-prefetch preconnect", href: "//fonts.googleapis.com/"}
     
@@ -45,7 +45,7 @@
       -# Header
       %header.mdl-layout__header
         .mdl-layout__header-row
-          %span.mdl-layout-title S--Minecraft
+          %span.mdl-layout-title= general.sitename
           .mdl-layout-spacer
           %nav.mdl-navigation.mdl-layout--large-screen-only
             %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|profile/"} Profile
@@ -55,7 +55,7 @@
             %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|links/"} Links
       -# Menu
       .mdl-layout__drawer
-        %span.mdl-layout-title S--Minecraft
+        %span.mdl-layout-title= general.sitename
         %nav.mdl-navigation
           %a.mdl-navigation__link{href: "|~~ .Site.Params.hpurl ~~|"}
             %i.material-icons.md-18 home

@@ -1,4 +1,11 @@
 {
+  "general": {
+    "sitename": "S--Minecraft",
+    "desc": "Portfolio of S__Minecraft",
+    "baseurl": "//s.4na.xyz/",
+    "color": "rgb(97, 56, 175)",
+    "twitter": "S__Minecraft"
+  },
   "works": [
     {
       "name": "MinecraftModLangFiles",
