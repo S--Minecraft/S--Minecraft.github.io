@@ -91,8 +91,8 @@ footer, .mdl-mini-footer {
 }
 
 #works-page-container {
-  background: #F5F8FA;
   #works-panels {
+    background: #F5F8FA;
     .actions {
       @include displayflex;
       @include flex-flow(row wrap);
@@ -260,6 +260,7 @@ footer, .mdl-mini-footer {
 #links-page-container {
   background: #F5F8FA;
   .link {
+    background: #FFFFFF;
     position: relative;
     h3 {
       width: 75%
