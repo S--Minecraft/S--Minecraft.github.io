@@ -63,6 +63,7 @@ footer, .mdl-mini-footer {
 }
 
 #profile-page-container {
+  background: #F5F8FA;
   #profile-card {
     padding: 10px;
     #icons {
@@ -90,6 +91,7 @@ footer, .mdl-mini-footer {
 }
 
 #works-page-container {
+  background: #F5F8FA;
   #works-panels {
     .actions {
       @include displayflex;
@@ -136,6 +138,7 @@ footer, .mdl-mini-footer {
 }
 
 #contact-page-container {
+  background: #F5F8FA;
   #form, #details {
     >.mdl-card {
       width: 100%;
@@ -224,6 +227,7 @@ footer, .mdl-mini-footer {
 }
 
 #blog-singlepage-container {
+  background: #F5F8FA;
   #ribbon {
     width: 100%;
     height: 40vh;
@@ -254,6 +258,7 @@ footer, .mdl-mini-footer {
 }
 
 #links-page-container {
+  background: #F5F8FA;
   .link {
     position: relative;
     h3 {
