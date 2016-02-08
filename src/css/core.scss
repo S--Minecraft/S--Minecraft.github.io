@@ -44,7 +44,8 @@ footer, .mdl-mini-footer {
 
 #top-page-container {
   box-sizing: border-box;
-  background-image: url("../img/top-background.png");
+  background-image: url("../img/top-background.svg");
+  background-size: cover;
   background-color: rgb(97,56,175);
   color: #FFFFFF;
   position: absolute;
