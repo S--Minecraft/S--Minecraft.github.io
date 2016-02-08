@@ -5,6 +5,16 @@
   ],
   "dependencies": {
     "material-design-lite": "1.0.x",
-    "shortquery": "S--Minecraft/ShortQuery.js#0.1.4"
+    "shortquery": "S--Minecraft/ShortQuery.js#0.1.4",
+    "material-design-icons": "*"
+  },
+  "overrides": {
+    "material-design-icons": {
+      "main": [
+        "iconfont/MaterialIcons-Regular.ttf",
+        "iconfont/MaterialIcons-Regular.woff",
+        "iconfont/MaterialIcons-Regular.woff2"
+      ]
+    }
   }
 }
