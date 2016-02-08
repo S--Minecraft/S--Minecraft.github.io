@@ -3,6 +3,8 @@
     "sitename": "S--Minecraft",
     "desc": "Portfolio of S__Minecraft",
     "baseurl": "//s.4na.xyz/",
+    "baseurlHttp": "http://s.4na.xyz/",
+    "baseurlHttps": "https://s.4na.xyz/",
     "color": "rgb(97, 56, 175)",
     "twitter": "S__Minecraft"
   },

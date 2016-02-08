@@ -14,6 +14,7 @@ cssnano = require "gulp-cssnano"
 inlineSource = require "gulp-inline-source"
 replace = require "gulp-replace"
 rename = require "gulp-rename"
+sitemap = require "gulp-sitemap"
 transform = require "./gulp-transform.coffee"
 
 tasks = ["coffee", "haml", "scss", "icons", "img", "lib", "cname"]
@@ -22,7 +23,9 @@ gulp.task "default", tasks
 gulp.task "hugo", ["hugo-run"]
 
 rtasks = ["js-min", "html-min", "css-min", "r-icons", "r-img", "r-lib", "r-cname"]
-gulp.task "release", rtasks
+gulp.task "release-without-sitemap", rtasks
+
+gulp.task "release", ["sitemap"]
 
 gulp.task "clean", (cb) ->
   return del ["./bin/**", "./release/**", "./hugo/publish/**"], cb
@@ -176,4 +179,11 @@ gulp.task "r-cname", ["cname"], ->
   return gulp.src "./bin/CNAME"
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(changed("./release"))
+    .pipe(gulp.dest("./release"))
+
+gulp.task "sitemap", ["release-without-sitemap"], ->
+  return gulp.src "./release/**/*.html"
+    .pipe(sitemap({
+      siteUrl: require("./src/haml.json").general.baseurlHttps
+    }))
     .pipe(gulp.dest("./release"))

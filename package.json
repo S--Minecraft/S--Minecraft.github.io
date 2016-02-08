@@ -24,6 +24,7 @@
     "gulp-cssnano": "*",
     "gulp-inline-source": "*",
     "gulp-replace": "*",
-    "gulp-rename": "*"
+    "gulp-rename": "*",
+    "gulp-sitemap": "*"
   }
 }
