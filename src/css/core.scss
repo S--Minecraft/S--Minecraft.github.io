@@ -211,6 +211,7 @@ footer, .mdl-mini-footer {
     @include flex-flow(row wrap);
     @include align-items(center);
     .icon.rss {
+      margin-right: 30px;
       zoom: 1.5;
     }
   }
