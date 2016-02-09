@@ -17,14 +17,14 @@ reqPath = "/api/v1/#{appNo}/send"
   新しい記事があるか探す
 ###
 hasNew = ->
-  res = execSync("git status | grep -P \"new file:.*\"blog\/(?!(?:categories\|tags)).*?\/.*?\/index\.html\"\"")
+  res = execSync("git status | grep -P \"new file:.*\\\"blog\/(?!(?:categories\|tags)).*?\/.*?\/index\.html\\\"\"")
   return (res isnt "")
 
 ###
   新しい記事の名前などを返す
 ###
 getNew = ->
-  newFileNameRaw = execSync("git status | grep -P \"new file:.*\"blog\/(?!(?:categories\|tags)).*?\/.*?\/index\.html\"\"")
+  newFileNameRaw = execSync("git status | grep -P \"new file:.*\\\"blog\/(?!(?:categories\|tags)).*?\/.*?\/index\.html\\\"\"")
   newFileName = newFileNameRaw.match(/new file:.*"blog\/(.*?\/.*?)\/index\.html"/)[1]
   return newFileName
 
