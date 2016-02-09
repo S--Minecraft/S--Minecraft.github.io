@@ -205,9 +205,15 @@ footer, .mdl-mini-footer {
       text-decoration: none;
     }
   }
-  .icon.rss {
-    zoom: 1.5;
-    margin: 24px 0 18px 0;
+  #follow {
+    margin-top: 24px;
+    @include displayflex;
+    @include flex-flow(row wrap);
+    @include align-items(center);
+    .icon.rss {
+      zoom: 1.5;
+      margin-bottom: 18px;
+    }
   }
   #sections, #categories, #tags {
     clear: left;
