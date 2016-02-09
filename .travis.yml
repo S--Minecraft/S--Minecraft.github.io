@@ -48,6 +48,6 @@ after_success:
 - ssh -T git@github.com
 - cd release
 - git add --all
-- if git status | grep -Go "new file:.*\"hugo/content/.*\.md\"" >/dev/null; then coffee push7.coffee ; fi
+- coffee push7.coffee
 - git commit -m "[Travis CI] $TRAVIS_COMMIT"
 - '[ "$TRAVIS_PULL_REQUEST" == "false" ] && git push git@github.com:S--Minecraft/s--minecraft.github.io.git master'

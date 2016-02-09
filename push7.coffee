@@ -14,20 +14,25 @@ reqHost = "dashboard.push7.jp"
 reqPath = "/api/v1/#{appNo}/send"
 
 ###
-  新しい記事の名前などを返す
-  [1]にmdのパス(拡張子含む)
-  [2]にhtmlのパス(拡張子除く)
+  新しい記事があるか探す
 ###
-getNewRegEx = ->
-  newFileNameRaw = execSync("git status | grep -G "new file:.*\"hugo/content/.*\.md\"")
-  newFileNameRegEx = newFileNameRaw.match(/new file:.*"(hugo/content/(.*)\.md)\"/)
-  return newFileNameRegEx
+hasNew = ->
+  res = execSync("git status | grep -G "new file:.*\"blog/(?!(?:categories|tags)).*?/.*?/index\.html\"")
+  return (res isnt "")
+
+###
+  新しい記事の名前などを返す
+###
+getNew = ->
+  newFileNameRaw = execSync("git status | grep -G "new file:.*\"blog/(?!(?:categories|tags)).*?/.*?/index\.html\"")
+  newFileName = newFileNameRaw.match(/new file:.*"blog/(.*?/.*?)/index\.html\"/)[1]
+  return newFileName
 
 ###
   mdからtitleを抽出
 ###
 getTitle = (fileName) ->
-  title = fs.readFileSync(fileName).match(/---(?:\n|.)*title: "(.*?)"(?:\n|.)*---/)[1]
+  title = fs.readFileSync(fileName).match(/<title>(.*?) - .*? | .*<\/title>/)[1]
   return title
 
 ###
@@ -56,8 +61,9 @@ post = (cfg) ->
   req.end()
   return
 
-cfg.apiKey = process.env.apiKey
-newFileNameRegEx = getNewRegEx()
-cfg.body = getTitle(newFileNameRegEx[1])
-cfg.url += newFileNameRegEx[2]
-post(cfg)
+if hasNew()
+  cfg.apiKey = process.env.apiKey
+  newFileName = getNew()
+  cfg.body = getTitle("./blog/#{newFileName}/index.html")
+  cfg.url += "#{newFileName}/"
+  post(cfg)
