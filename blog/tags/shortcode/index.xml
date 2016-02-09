@@ -33,6 +33,112 @@
 &lt;h2 id=&#34;全般:c1a9a041c6074916a741b6df82481148&#34;&gt;全般&lt;/h2&gt;
 
 &lt;h3 id=&#34;ファビコン付きリンク:c1a9a041c6074916a741b6df82481148&#34;&gt;ファビコン付きリンク&lt;/h3&gt;
+
+ 
+&lt;a href=&#34;http://www.google.co.jp&#34;&gt;
+&lt;img src=&#34;http://favicon.hatena.ne.jp/?url=http%3a%2f%2fwww.google.co.jp&#34; style=&#34;text-align:left;margin:0 5px 0 5px&#34;/&gt;Google&lt;/a&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;|~~ $url := .Get 0 ~~|
+|~~ $title := .Get 1 ~~|
+&lt;span style=&#34;color: #f92672&#34;&gt;%a&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;|~~ $url ~~|&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+  &lt;span style=&#34;color: #f92672&#34;&gt;%img&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;http://favicon.hatena.ne.jp/?url=|~~ $url ~~|&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;style&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;float:left;margin:5px 5px 0px 5px&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+  |~~ $title ~~|
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;使い方&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;｛｛% link &amp;quot;リンク先&amp;quot; &amp;quot;表示文字列&amp;quot; %｝｝
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;github:c1a9a041c6074916a741b6df82481148&#34;&gt;GitHub&lt;/h2&gt;
+
+&lt;p&gt; 
+&lt;a href=&#34;https://github.com/lepture/github-cards&#34;&gt;
+&lt;img src=&#34;http://favicon.hatena.ne.jp/?url=https%3a%2f%2fgithub.com%2flepture%2fgithub-cards&#34; style=&#34;text-align:left;margin:0 5px 0 5px&#34;/&gt;GitHub Cards&lt;/a&gt; を利用しているので&lt;br /&gt;
+&lt;code&gt;data-～&lt;/code&gt;の属性をいじくったらいろいろ変えれます&lt;/p&gt;
+
+&lt;h3 id=&#34;レポジトリ:c1a9a041c6074916a741b6df82481148&#34;&gt;レポジトリ&lt;/h3&gt;
+
+
+&lt;div data-user=&#34;S--Minecraft&#34; data-repo=&#34;ShortQuery.js&#34; data-width=&#34;300&#34; data-height=&#34;200&#34; data-theme=&#34;medium&#34; data-target=&#34;blank&#34; class=&#34;github-card&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//cdn.jsdelivr.net/github-cards/latest/widget.js&#34; defer=&#34;defer&#34; async=&#34;async&#34;&gt;&lt;/script&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;.github-card&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-user&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;|~~ .Get 0 ~~|&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-repo&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;|~~ .Get 1 ~~|&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-width&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;300&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-height&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;200&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-theme&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;medium&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-target&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;blank&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #f92672&#34;&gt;%script&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;使い方&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;｛｛% github &amp;quot;S--Minecraft&amp;quot; &amp;quot;ShortQuery.js&amp;quot; %｝｝
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;ユーザー:c1a9a041c6074916a741b6df82481148&#34;&gt;ユーザー&lt;/h3&gt;
+
+
+&lt;div data-user=&#34;S--Minecraft&#34; data-width=&#34;300&#34; data-height=&#34;200&#34; data-theme=&#34;medium&#34; data-target=&#34;blank&#34; class=&#34;github-card&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//cdn.jsdelivr.net/github-cards/latest/widget.js&#34; defer=&#34;defer&#34; async=&#34;async&#34;&gt;&lt;/script&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;.github-card&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-user&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;|~~ .Get 0 ~~|&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-width&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;300&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-height&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;200&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-theme&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;medium&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;data-target&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;blank&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color: #f92672&#34;&gt;%script&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;使い方&lt;/p&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;｛｛% githubuser &amp;quot;ユーザー名&amp;quot; %｝｝
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;ニコ動関連:c1a9a041c6074916a741b6df82481148&#34;&gt;ニコ動関連&lt;/h2&gt;
+
+&lt;p&gt; 
+&lt;a href=&#34;http://qiita.com/kounoike/items/cdbfaa2dab9bd3393a84&#34;&gt;
+&lt;img src=&#34;http://favicon.hatena.ne.jp/?url=http%3a%2f%2fqiita.com%2fkounoike%2fitems%2fcdbfaa2dab9bd3393a84&#34; style=&#34;text-align:left;margin:0 5px 0 5px&#34;/&gt;Hugoのshortcodesでnicovideoの埋め込みを簡単にする&lt;/a&gt; からのコピペなのでそちらを…&lt;/p&gt;
+
+&lt;h3 id=&#34;動画サムネイル:c1a9a041c6074916a741b6df82481148&#34;&gt;動画サムネイル&lt;/h3&gt;
+
+&lt;p&gt;
+&lt;iframe width=&#34;312&#34; height=&#34;200&#34; src=&#34;http://ext.nicovideo.jp/thumb/sm9&#34; scrolling=&#34;no&#34; style=&#34;border:solid 1px #CCC&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;動画プレイヤー:c1a9a041c6074916a741b6df82481148&#34;&gt;動画プレイヤー&lt;/h3&gt;
+
+&lt;p&gt;   
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://ext.nicovideo.jp/thumb_watch/sm9?w=490&amp;amp;amp;h=307&#34; defer=&#34;defer&#34; async=&#34;async&#34;&gt;&lt;/script&gt;
+&lt;noscript&gt;
+&lt;a href=&#34;http://www.nicovideo.jp/watch/sm9&#34;&gt;新・豪血寺一族 -煩悩解放 - レッツゴー！陰陽師&lt;/a&gt;&lt;/noscript&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;おまけ:c1a9a041c6074916a741b6df82481148&#34;&gt;おまけ&lt;/h2&gt;
+
+&lt;p&gt;Hugoに組み込まれているものを…
+コードは  
+&lt;a href=&#34;https://gohugo.io/extras/shortcodes/&#34;&gt;
+&lt;img src=&#34;http://favicon.hatena.ne.jp/?url=https%3a%2f%2fgohugo.io%2fextras%2fshortcodes%2f&#34; style=&#34;text-align:left;margin:0 5px 0 5px&#34;/&gt;こちら&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;twitter:c1a9a041c6074916a741b6df82481148&#34;&gt;Twitter&lt;/h3&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Hugo 0.15 will have 30%+ faster render times thanks to this commit &lt;a href=&#34;https://t.co/FfzhM8bNhT&#34;&gt;https://t.co/FfzhM8bNhT&lt;/a&gt;  &lt;a href=&#34;https://twitter.com/hashtag/gohugo?src=hash&#34;&gt;#gohugo&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/golang?src=hash&#34;&gt;#golang&lt;/a&gt; &lt;a href=&#34;https://t.co/ITbMNU2BUf&#34;&gt;https://t.co/ITbMNU2BUf&lt;/a&gt;&lt;/p&gt;&amp;mdash; Steve Francia (@spf13) &lt;a href=&#34;https://twitter.com/spf13/status/666616452582129664&#34;&gt;November 17, 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;youtube:c1a9a041c6074916a741b6df82481148&#34;&gt;Youtube&lt;/h3&gt;
+
+&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/w7Ft2ymGmfc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;vimeo:c1a9a041c6074916a741b6df82481148&#34;&gt;Vimeo&lt;/h3&gt;
+
+&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//player.vimeo.com/video/146022717&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;githubのgist:c1a9a041c6074916a741b6df82481148&#34;&gt;GitHubのgist&lt;/h3&gt;
+
+&lt;p&gt;&lt;script src=&#34;//gist.github.com/spf13/7896402.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ぼそっ:c1a9a041c6074916a741b6df82481148&#34;&gt;ぼそっ&lt;/h2&gt;
+
+&lt;p&gt;すごい重い記事になりそう…
+js入りまくってるだろうし…&lt;/p&gt;
+
+&lt;p&gt;追記
+ニコ動関連がhttpsで破壊されてる…
+誰か対処法あったら教えてほしいです&lt;/p&gt;
 </description>
     </item>
     
