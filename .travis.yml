@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- "0.12"
+- '0.12'
 sudo: false
 cache:
   directories:
@@ -10,8 +10,8 @@ cache:
   - "$HOME/.nvm"
   - "$HOME/.cache/pip"
 before_cache:
-  - rm -f $HOME/.cache/pip/log/debug.log
-  - rm -rf $HOME/.cache/pip/http
+- rm -f $HOME/.cache/pip/log/debug.log
+- rm -rf $HOME/.cache/pip/http
 branches:
   only:
   - source
@@ -24,14 +24,13 @@ env:
   - GIT_AUTHOR_NAME="Travis CI"
   - GIT_AUTHOR_EMAIL=S--Minecraft@users.noreply.github.com
   - secure: L7awusiT3hVcb660hJplgkDn0UfJD/5ptU8idRjKb4tcsZSkwI8mrQwBR3ABlm/Lsqr212RyWKboQb0n2TZhMUHW0fhmlBClHw9CbTof7YMUwt7Dt65P//enj9Znzeg77k4TuxBuXm+apk+9P7iGsASUEsvF3xUqWXvlDXkk7qdgO+jSpnG8Vyx1NRpYvPlQU+P+nrNEW/PaWtDCR51gRK57zgARzXQIyAUY9dqnHrRAv91MpVsd8Un8AryUrBjiM7QGaIO6rgdz1+NxFe64L9LrRIaoERNt7LSDwkqrCGkBe346aUUH8MZ0MrH4syGe7PPINA3XUisRSUv2gG6RjQMTxBd3UlnkXwP2KhsL5mCahM/BR/4TMor06o+k//lYxXsVTrNZU43i/6C0oO097wNZhxZBXUpo3Bj76SadpaU8q1WoJRk8tGD+07aWjcPLnJHJnFS/9wPR97B5PkwzHFu+anD3girqUA6i8Hh9B7BVE1GShTGr5zo9nWA27h2Wt0zRywMXYrqGhbwKo54trA+kywm4UB0AHooadkqWIhSgidnff6A2G5ZaB4G2RyO+bGUb48AfXLKLcKSS2EenaWf0Fi2l951ROwvNA7QhJ2YXcTaWSd/vgp1wddaJSIrh0bQTcnSzRGsKfYBwJzcW72Kjh8sQ5T8UKCuNen+v+CE=
+  - secure: ewfo2MORn2H+szEB9Eb4+APlOMKQV8Iw7ZcMTQqHo+q8nIQMHsEHxhBhipH2gBinOe30flP3KGNj78wA7QYK6WsAUxkfu1atFkiiDe3HU0fcziuQDvb/USXwNyljbJZt2wZ5C1rUui0/+HTU3vxALd+nUnoY+eg48kYOD3w9A3X0LFFTlOKa4AFgnNmcfqFyfZEyVjWFKiJWmea8VL2qTyf6u9eITzcRHD6WGVqm4V1tWeC3rBhpOu+VPNuciv/UfBdRFXWvloqWLukzPTAH6XGYFX8Xz7Bdxd+AHHeGe8appdPY/jzOwxDi0LfLMsl1Lwu1uPGdbKCZjiWYiPtuCcx58HCQP3vmmySTEknB/PIVkUtmrmCCYdjh34g9geMlSNWGggKrJJMTFtWGr2b48I2mAsAycuKQzj20ub7NZt+wATSjN58TUiTl6UMGiPhs2XgtGjICLbF2oriea7f6MzH2Yr+ShNR2tvRKV3jAJEjWv7335osdQQLROxQbaj1WAl9CQivBVgNsQjVCFivcAiq6mTlAF600O6QwanjpO1d/xkeupwYddF03B0CU0hXX+fl4ZJnpnygAJOjZSGlPEjfSD3it+ZAI5Egv3GbNW0R/0oac4+2b6EBQ04Xf+0KnwQ7vHf3rvoFYRMQzxoBl+W//TaHz4mwi2tZqKR69K/8=
 install:
-  - go get -v github.com/spf13/hugo
-  - pip install Pygments --user
+- go get -v github.com/spf13/hugo
+- pip install Pygments --user
 before_script:
-- echo "Version"
 - go version
 - hugo version
-- echo "-------"
 - npm install
 - node_modules/.bin/bower install
 - git clone -b master https://github.com/S--Minecraft/s--minecraft.github.io release
@@ -49,5 +48,6 @@ after_success:
 - ssh -T git@github.com
 - cd release
 - git add --all
+- if git status | grep -Go "new file:.*\"hugo/content/.*\.md\"" >/dev/null; then coffee push7.coffee ; fi
 - git commit -m "[Travis CI] $TRAVIS_COMMIT"
 - '[ "$TRAVIS_PULL_REQUEST" == "false" ] && git push git@github.com:S--Minecraft/s--minecraft.github.io.git master'
