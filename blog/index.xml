@@ -7,21 +7,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
     <copyright>(C) 2015-2016 S__Minecraft</copyright>
-    <lastBuildDate>Tue, 09 Feb 2016 23:07:56 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 13 Jan 2016 20:10:48 +0900</lastBuildDate>
     <atom:link href="//s.4na.xyz/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Travisでpush7を叩くテスト</title>
-      <link>//s.4na.xyz/blog/webservice/test-push7-travis/</link>
-      <pubDate>Tue, 09 Feb 2016 23:07:56 +0900</pubDate>
-      
-      <guid>//s.4na.xyz/blog/webservice/test-push7-travis/</guid>
-      <description>&lt;p&gt;travisから&lt;a href=&#34;https://push7.jp/&#34;&gt;push7&lt;/a&gt;を叩くようにしてみたので
-そのテストです&lt;/p&gt;
-
-&lt;p&gt;おそらく動くはず…&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>HugoのShortcodeを書いた</title>
