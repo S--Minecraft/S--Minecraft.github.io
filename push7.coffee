@@ -27,7 +27,7 @@ getNewRegEx = ->
   mdからtitleを抽出
 ###
 getTitle = (fileName) ->
-  title = fs.readFileSync(fileName).match(/<title>(.*?) - .*? | .*<\/title>/)[1]
+  title = fs.readFileSync(fileName, "utf8").match(/<title>(.*?) - .*? | .*<\/title>/)[1]
   return title
 
 ###
