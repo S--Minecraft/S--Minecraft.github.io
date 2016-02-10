@@ -54,7 +54,7 @@ post = (cfg) ->
   req.end()
   return
 
-newMatch = getNewRegExp
+newMatch = getNewRegEx()
 if newMatch?
   cfg.apiKey = process.env.apiKey
   newFileName = newMatch[1]
