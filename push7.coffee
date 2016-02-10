@@ -14,19 +14,11 @@ reqHost = "dashboard.push7.jp"
 reqPath = "/api/v1/#{appNo}/send"
 
 ###
-  新しい記事があるか探す
+  新しい記事がある
 ###
-hasNew = ->
-  res = execSync("git status | grep -P 'new file:.*\"?blog\/(?!(?:categories\|tags)).*?\/.*?\/index\.html\"?'")
-  return (res isnt "")
-
-###
-  新しい記事の名前などを返す
-###
-getNew = ->
-  newFileNameRaw = execSync("git status | grep -P 'new file:.*\"?blog\/(?!(?:categories\|tags)).*?\/.*?\/index\.html\"?'")
-  newFileName = newFileNameRaw.match(/new file:.*"blog\/(.*?\/.*?)\/index\.html"/)[1]
-  return newFileName
+getNewRegEx = ->
+  status = execSync("git status")
+  return status.match(/new file:.*"?blog\/(?!(?:categories|tags))(.*?\/.*?)\/index\.html"?/)
 
 ###
   mdからtitleを抽出
@@ -62,9 +54,10 @@ post = (cfg) ->
   req.end()
   return
 
-if hasNew()
+newMatch = getNewRegExp
+if newMatch?
   cfg.apiKey = process.env.apiKey
-  newFileName = getNew()
+  newFileName = newMatch[1]
   cfg.body = getTitle("./blog/#{newFileName}/index.html")
   cfg.url += "#{newFileName}/"
   post(cfg)
