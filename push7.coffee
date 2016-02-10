@@ -17,7 +17,7 @@ reqPath = "/api/v1/#{appNo}/send"
   新しい記事がある
 ###
 getNewRegEx = ->
-  status = execSync("git status")
+  status = execSync("git status").toString()
   return status.match(/new file:.*"?blog\/(?!(?:categories|tags))(.*?\/.*?)\/index\.html"?/)
 
 ###
