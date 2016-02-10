@@ -1,1 +1,0 @@
-(function(){var e,t;e=function(){var e,t;t=window.innerHeight,e=$$.T("header")[0].offsetHeight+$$.T("footer")[0].offsetHeight,$$.I("top-page-container").style.height=t-e+"px"},document.on("DOMContentLoaded",function(){e()}),t=!1,window.on("resize",function(){t&&clearTimeout(t),t=setTimeout(function(){e()},200)})}).call(this);
