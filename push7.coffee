@@ -18,6 +18,9 @@ reqPath = "/api/v1/#{appNo}/send"
 ###
 getNewRegEx = ->
   status = execSync("git status").toString()
+  console.log "-----status-----"
+  console.log status
+  console.log "----------------"
   return status.match(/new file:.*"?blog\/(?!(?:categories|tags))(.*?\/.*?)\/index\.html"?/)
 
 ###
@@ -55,6 +58,9 @@ post = (cfg) ->
   return
 
 newMatch = getNewRegEx()
+console.log "------newMatch------"
+console.log newMatch
+console.log "--------------------"
 if newMatch?
   cfg.apiKey = process.env.apiKey
   newFileName = newMatch[1]
