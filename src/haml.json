@@ -43,7 +43,7 @@
     {
       "name": "read.crx 2",
       "desc": "Chromeアプリの2chブラウザです。awefさんによって造られ、eruさんに引き継がれました。自分はメンテナーです。",
-      "dl": "http://readcrx-2.github.io/read.crx-2/",
+      "dl": "https://readcrx-2.github.io/readcrx-2/",
       "github": "https://github.com/readcrx-2/read.crx-2",
       "tags": ["Chrome", "Coffeescript", "Haml", "SCSS"]
     },
@@ -62,7 +62,7 @@
     {
       "name": "Shooting!",
       "desc": "phina.jsを利用したシューティングゲームです",
-      "dl": "http://s--minecraft.github.io/shooting",
+      "dl": "https://shooting.4na.xyz/",
       "github": "https://github.com/S--Minecraft/shooting",
       "tags": ["Coffeescript", "Haml", "SCSS", "phinajs"]
     }
