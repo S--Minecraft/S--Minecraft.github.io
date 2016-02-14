@@ -1,4 +1,5 @@
-gas = "https://script.google.com/macros/s/AKfycbzLI3UBsmd-3OS9_LmiM6DQVXFTP2axRtVwGlinr5ctHBj_NS4/exec?sn="
+api = "https://api.4na.xyz/twitter/user/show/icon/"
+params = "?size=large&type=https"
 
 insertImg = (DOM, xhr) ->
   return (e) ->
@@ -12,7 +13,7 @@ document.on("DOMContentLoaded", ->
   for DOM in $$.C("twiiconImg")
     sn = DOM.getAttr("sn")
     xhr = new XMLHttpRequest()
-    xhr.open("GET", gas+sn)
+    xhr.open("GET", api+sn+params)
     if xhr.timeout?
       xhr.on("timeout", (e) ->
         console.error "XHR Timeout: Twitter Icon getting"
