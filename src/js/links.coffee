@@ -1,5 +1,5 @@
 api = "https://api.4na.xyz/twitter/user/show/icon/"
-params = "?size=large&type=https"
+params = "?size=bigger&type=https"
 
 insertImg = (DOM, xhr) ->
   return (e) ->
