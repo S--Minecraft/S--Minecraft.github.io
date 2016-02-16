@@ -21,3 +21,9 @@ set = (obj) ->
 # Progress Bars
 for key, v of pLang
   $$.I(key).on("mdl-componentupgraded", set(v))
+
+document.on("mdl-componentupgraded", ->
+  #twitter
+  `!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");`
+  return
+)
