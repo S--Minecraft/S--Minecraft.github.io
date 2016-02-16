@@ -17,6 +17,10 @@
   -webkit-align-items: $val;
   align-items: $val;
 }
+@mixin justify-content($val) {
+  -webkit-justify-content: $val;
+  justify-content: $val;
+}
 
 main.mdl-layout__content {
   @include displayflex;
@@ -26,7 +30,7 @@ main.mdl-layout__content {
 #content {
   @include flex(1 0 auto);
   position: relative;
-  .h4 {
+  .h4, .h5 {
     margin: 0;
   }
 }
@@ -87,7 +91,27 @@ footer, .mdl-mini-footer {
     margin: 0;
   }
   #github {
-    min-width: 600px;
+    .buttons {
+      @include displayflex;
+      @include flex-flow(row nowrap);
+      @include justify-content(space-between);
+      a {
+        @include flex(1 0);
+        color: #333333;
+        text-decoration: none;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        padding-left: 4px;
+        &:not(:first-child) {
+          border-left-width: thin;
+          border-left-style: dotted;
+          border-left-color: #999999;
+        }
+        span {
+          margin-right: 30px;
+        }
+      }
+    }
   }
 }
 
@@ -323,6 +347,20 @@ code {
   line-height: 32px;
   -moz-osx-font-smoothing: grayscale;
   margin: 24px 0 16px;
+}
+.h5, .h6 {
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  margin: 24px 0 16px;
+}
+.h5 {
+  font-size: 20px;
+  font-weight: 500;
+  line-weight: 1;
+  letter-spacing: .02em;
+}
+.h6 {
+  font-size: 16px;
+  letter-spacing: .04em;
 }
 //center
 .text-center {
