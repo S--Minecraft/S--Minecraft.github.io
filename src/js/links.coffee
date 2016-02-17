@@ -5,8 +5,8 @@ insertImg = (DOM, xhr) ->
   return (e) ->
     img = $__("img")
     img.src = xhr.response
-    DOM.parentNode.insertBefore(img, DOM.nextSibling)
-    DOM.parentNode.removeChild(DOM)
+    DOM.addAfter(img)
+    DOM.remove()
     return
 
 document.on("DOMContentLoaded", ->
