@@ -76,7 +76,7 @@
                 .mdl-card__title
                   %h2.h4.mdl-card__title-text Contact
                 .mdl-card__supporting-text
-                  %form#form-main{action: "#"}
+                  %form#form-main{method: "POST", action: "https://api.4na.xyz/mail/send"}
                     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
                       %input.mdl-textfield__input#name{type: "text", required: true}
                       %label.mdl-textfield__label{for: "name"} Name
@@ -93,9 +93,7 @@
                       %textarea.mdl-textfield__input#message{type: "text", rows: "5", required: true}
                       %label.mdl-textfield__label{for: "message"} Message
                     %br
-                    .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                      %input.mdl-textfield__input#url{type: "text", required: true}
-                      %label.mdl-textfield__label{for: "url"} Enter this page's url
+                    .g-recaptcha{"data-sitekey": "6LcE0xUTAAAAABcj6G2UB9cZqRM-CQULKoItGnJ5"}
                     %input#submit.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect{type: "submit"}
                   %p#status
             #details.mdl-cell.mdl-cell--4-col
@@ -131,5 +129,4 @@
             %p (C) 2015-2016 S__Minecraft
     
     %script{type: "text/javascript", src: "../lib/material.min.js", defer: true, async: true}
-    %script{type: "text/javascript", src: "../lib/shortQuery.min.js", defer: true}
-    %script{type: "text/javascript", src: "../js/contact.js", defer: true}
+    %script{type: "text/javascript", src: "https://www.google.com/recaptcha/api.js?hl=ja", defer: true, async: true}
