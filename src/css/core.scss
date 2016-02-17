@@ -93,7 +93,7 @@ footer, .mdl-mini-footer {
   #github {
     .buttons {
       @include displayflex;
-      @include flex-flow(row nowrap);
+      @include flex-flow(row wrap);
       @include justify-content(space-between);
       a {
         @include flex(1 0);
@@ -167,26 +167,11 @@ footer, .mdl-mini-footer {
   #form, #details {
     >.mdl-card {
       width: 100%;
-
       form > * {
         width: 100%;
       }
-      #status {
-        font-size: 18px;
+      #submit {
         margin-top: 10px;
-        font-weight: 800;
-        border-style: solid;
-        border-width: 1px;
-        border-radius: 3px;
-        color: #FFFFFF;
-        &.success {
-          border-color: #333399;
-          background: #6666CC;
-        }
-        &.error {
-          border-color: #993333;
-          background: #CC6666;
-        }
       }
     }
   }
