@@ -1,1 +1,1 @@
-(function(){}).call(this);
+(function(){console.log("test")}).call(this);
