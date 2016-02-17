@@ -71,7 +71,7 @@
       "desc": "DOM操作のショートハンドの寄せ集めのJavascriptの超軽量ライブラリです",
       "dl": "http://shortquery.js.org/",
       "github": "https://github.com/S--Minecraft/shortquery.js",
-      "tags": ["Javascript"]
+      "tags": ["Coffeescript"]
     }
   ],
   "links": [
