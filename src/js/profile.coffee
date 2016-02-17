@@ -57,10 +57,13 @@ document.on("DOMContentLoaded", ->
     title.insertAdjacentHTML("beforeend", obj.name)
     title.insertAdjacentHTML("afterend", "<img src=#{obj.avatar_url}>")
     buttons = $$.I("github").C("buttons")[0]
-    buttons.insertAdjacentHTML("beforeend", "<a href=\"https://github.com/S--Minecraft/followers\"><span class=\"mdl-badge\" data-badge=\"#{obj.followers}\">Followers</span></a>")
-    buttons.insertAdjacentHTML("beforeend", "<a href=\"https://github.com/S--Minecraft/following\"><span class=\"mdl-badge\" data-badge=\"#{obj.following}\">Following</span></a>")
-    buttons.insertAdjacentHTML("beforeend", "<a href=\"https://github.com/S--Minecraft?tab=repositories\"><span class=\"mdl-badge\" data-badge=\"#{obj.public_repos}\">Repos</span></a>")
-    buttons.insertAdjacentHTML("beforeend", "<a href=\"https://gist.github.com/S--Minecraft\"><span class=\"mdl-badge\" data-badge=\"#{obj.public_gists}\">Gists</span></a>")
+    text = """
+           <a href="https://github.com/S--Minecraft/followers"><span class="mdl-badge" data-badge="#{obj.followers}">Followers</span></a>
+           <a href="https://github.com/S--Minecraft/following"><span class="mdl-badge" data-badge="#{obj.following}">Following</span></a>
+           <a href="https://github.com/S--Minecraft?tab=repositories"><span class="mdl-badge" data-badge="#{obj.public_repos}">Repos</span></a>
+           <a href="https://gist.github.com/S--Minecraft"><span class="mdl-badge" data-badge="#{obj.public_gists}">Gists</span></a>
+           """
+    buttons.insertAdjacentHTML("beforeend", text)
     return
   )
   get("https://api.github.com/users/S--Minecraft/subscriptions", (res) ->
@@ -82,9 +85,11 @@ document.on("DOMContentLoaded", ->
     sorted = Object.keys(langList).sort((a,b) -> return langList[b]-langList[a])
 
     langs = $$.I("github").T("ol")[0]
+    text = ""
     for s in sorted
       percent = Math.round(langList[s]/length*100)
-      langs.insertAdjacentHTML("beforeend", "<li>#{s}: #{percent}% (#{langList[s]})</li>")
+      text += "<li>#{s}: #{percent}% (#{langList[s]})</li>"
+    langs.insertAdjacentHTML("beforeend", text)
   )
   return
 )
