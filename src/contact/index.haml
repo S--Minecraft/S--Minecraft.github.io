@@ -78,19 +78,19 @@
                 .mdl-card__supporting-text
                   %form#form-main{method: "POST", action: "https://api.4na.xyz/mail/send"}
                     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                      %input.mdl-textfield__input#name{type: "text", required: true}
+                      %input.mdl-textfield__input#name{name: "name", type: "text", required: true}
                       %label.mdl-textfield__label{for: "name"} Name
                     %br
                     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                      %input.mdl-textfield__input#email{type: "email", required: true}
+                      %input.mdl-textfield__input#email{name: "email", type: "email", required: true}
                       %label.mdl-textfield__label{for: "email"} Email Address
                     %br
                     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                      %input.mdl-textfield__input#title{type: "text", required: true}
+                      %input.mdl-textfield__input#title{name: "title", type: "text", required: true}
                       %label.mdl-textfield__label{for: "title"} Title
                     %br
                     .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
-                      %textarea.mdl-textfield__input#message{type: "text", rows: "5", required: true}
+                      %textarea.mdl-textfield__input#message{name: "message", type: "text", rows: "5", required: true}
                       %label.mdl-textfield__label{for: "message"} Message
                     %br
                     .g-recaptcha{"data-sitekey": "6LcE0xUTAAAAABcj6G2UB9cZqRM-CQULKoItGnJ5"}
