@@ -13,12 +13,12 @@ disqus_title: "windows/icon"
 <!--more-->
 ものを使っていたんですが、  
 Win10でフォルダアイコンが変わったので  
-合わないので自分で作りました
-
-![icon](icon.png)
+合わないので自分で作りました  
+  
+![icon](../icon.png)  
 (.pyと.xmlと.htmlが抜けてる...)
 
 いい感じにできました(なんかwindowsのレジストリが意味不明でアイコンの適応が謎)
 
-需要ないとおもいますがzipおいておきます
+需要ないとおもいますがzipおいておきます  
 {{% link "https://www.dropbox.com/s/lcwdnqg7d0iujh2/icon.zip?dl=0" "zip" %}}
