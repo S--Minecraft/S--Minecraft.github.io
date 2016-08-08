@@ -90,9 +90,9 @@
 
 <p>すべての使い方は<code>{{ }}</code>が全角になってます</p>
 
-<h2 id="全般:c1a9a041c6074916a741b6df82481148">全般</h2>
+<h2 id="全般">全般</h2>
 
-<h3 id="ファビコン付きリンク:c1a9a041c6074916a741b6df82481148">ファビコン付きリンク</h3>
+<h3 id="ファビコン付きリンク">ファビコン付きリンク</h3>
 
  
 <a href="http://www.google.co.jp">
@@ -105,17 +105,18 @@
 </pre></div>
 
 <p>使い方</p>
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span>｛｛% link &quot;リンク先&quot; &quot;表示文字列&quot; %｝｝
-</pre></div>
 
-<h2 id="github:c1a9a041c6074916a741b6df82481148">GitHub</h2>
+<pre><code>｛｛% link &quot;リンク先&quot; &quot;表示文字列&quot; %｝｝
+</code></pre>
+
+<h2 id="github">GitHub</h2>
 
 <p> 
 <a href="https://github.com/lepture/github-cards">
 <img src="http://favicon.hatena.ne.jp/?url=https%3a%2f%2fgithub.com%2flepture%2fgithub-cards" style="text-align:left;margin:0 5px 0 5px"/>GitHub Cards</a> を利用しているので<br />
 <code>data-～</code>の属性をいじくったらいろいろ変えれます</p>
 
-<h3 id="レポジトリ:c1a9a041c6074916a741b6df82481148">レポジトリ</h3>
+<h3 id="レポジトリ">レポジトリ</h3>
 
 
 <div data-user="S--Minecraft" data-repo="ShortQuery.js" data-width="300" data-height="200" data-theme="medium" data-target="blank" class="github-card"></div>
@@ -125,10 +126,11 @@
 </pre></div>
 
 <p>使い方</p>
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span>｛｛% github &quot;S--Minecraft&quot; &quot;ShortQuery.js&quot; %｝｝
-</pre></div>
 
-<h3 id="ユーザー:c1a9a041c6074916a741b6df82481148">ユーザー</h3>
+<pre><code>｛｛% github &quot;S--Minecraft&quot; &quot;ShortQuery.js&quot; %｝｝
+</code></pre>
+
+<h3 id="ユーザー">ユーザー</h3>
 
 
 <div data-user="S--Minecraft" data-width="300" data-height="200" data-theme="medium" data-target="blank" class="github-card"></div>
@@ -138,60 +140,61 @@
 </pre></div>
 
 <p>使い方</p>
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span>｛｛% githubuser &quot;ユーザー名&quot; %｝｝
-</pre></div>
 
-<h2 id="ニコ動関連:c1a9a041c6074916a741b6df82481148">ニコ動関連</h2>
+<pre><code>｛｛% githubuser &quot;ユーザー名&quot; %｝｝
+</code></pre>
+
+<h2 id="ニコ動関連">ニコ動関連</h2>
 
 <p> 
 <a href="http://qiita.com/kounoike/items/cdbfaa2dab9bd3393a84">
 <img src="http://favicon.hatena.ne.jp/?url=http%3a%2f%2fqiita.com%2fkounoike%2fitems%2fcdbfaa2dab9bd3393a84" style="text-align:left;margin:0 5px 0 5px"/>Hugoのshortcodesでnicovideoの埋め込みを簡単にする</a> からのコピペなのでそちらを…</p>
 
-<h3 id="動画サムネイル:c1a9a041c6074916a741b6df82481148">動画サムネイル</h3>
+<h3 id="動画サムネイル">動画サムネイル</h3>
 
-<p>
-<iframe width="312" height="200" src="http://ext.nicovideo.jp/thumb/sm9" scrolling="no" style="border:solid 1px #CCC"></iframe></p>
 
-<h3 id="動画プレイヤー:c1a9a041c6074916a741b6df82481148">動画プレイヤー</h3>
+<iframe width="312" height="200" src="http://ext.nicovideo.jp/thumb/sm9" scrolling="no" style="border:solid 1px #CCC"></iframe>
 
-<p>   
+<h3 id="動画プレイヤー">動画プレイヤー</h3>
+
+   
 <script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/sm9?w=490&amp;amp;h=307" defer="defer" async="async"></script>
 <noscript>
-<a href="http://www.nicovideo.jp/watch/sm9">新・豪血寺一族 -煩悩解放 - レッツゴー！陰陽師</a></noscript></p>
+<a href="http://www.nicovideo.jp/watch/sm9">新・豪血寺一族 -煩悩解放 - レッツゴー！陰陽師</a></noscript>
 
-<h2 id="おまけ:c1a9a041c6074916a741b6df82481148">おまけ</h2>
+<h2 id="おまけ">おまけ</h2>
 
 <p>Hugoに組み込まれているものを…
 コードは  
 <a href="https://gohugo.io/extras/shortcodes/">
 <img src="http://favicon.hatena.ne.jp/?url=https%3a%2f%2fgohugo.io%2fextras%2fshortcodes%2f" style="text-align:left;margin:0 5px 0 5px"/>こちら</a></p>
 
-<h3 id="twitter:c1a9a041c6074916a741b6df82481148">Twitter</h3>
+<h3 id="twitter">Twitter</h3>
 
-<p><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hugo 0.15 will have 30%+ faster render times thanks to this commit <a href="https://t.co/FfzhM8bNhT">https://t.co/FfzhM8bNhT</a>  <a href="https://twitter.com/hashtag/gohugo?src=hash">#gohugo</a> <a href="https://twitter.com/hashtag/golang?src=hash">#golang</a> <a href="https://t.co/ITbMNU2BUf">https://t.co/ITbMNU2BUf</a></p>&mdash; Steve Francia (@spf13) <a href="https://twitter.com/spf13/status/666616452582129664">November 17, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hugo 0.15 will have 30%+ faster render times thanks to this commit <a href="https://t.co/FfzhM8bNhT">https://t.co/FfzhM8bNhT</a>  <a href="https://twitter.com/hashtag/gohugo?src=hash">#gohugo</a> <a href="https://twitter.com/hashtag/golang?src=hash">#golang</a> <a href="https://t.co/ITbMNU2BUf">https://t.co/ITbMNU2BUf</a></p>&mdash; Steve Francia (@spf13) <a href="https://twitter.com/spf13/status/666616452582129664">November 17, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<h3 id="youtube:c1a9a041c6074916a741b6df82481148">Youtube</h3>
+<h3 id="youtube">Youtube</h3>
 
-<p>
+
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
   <iframe src="//www.youtube.com/embed/w7Ft2ymGmfc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
  </div>
-</p>
 
-<h3 id="vimeo:c1a9a041c6074916a741b6df82481148">Vimeo</h3>
 
-<p>
+<h3 id="vimeo">Vimeo</h3>
+
+
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
   <iframe src="//player.vimeo.com/video/146022717" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
  </div>
-</p>
 
-<h3 id="githubのgist:c1a9a041c6074916a741b6df82481148">GitHubのgist</h3>
 
-<p><script src="//gist.github.com/spf13/7896402.js"></script></p>
+<h3 id="githubのgist">GitHubのgist</h3>
 
-<h2 id="ぼそっ:c1a9a041c6074916a741b6df82481148">ぼそっ</h2>
+<script src="//gist.github.com/spf13/7896402.js"></script>
+
+<h2 id="ぼそっ">ぼそっ</h2>
 
 <p>すごい重い記事になりそう…
 js入りまくってるだろうし…</p>
